@@ -1,11 +1,11 @@
 .videoWrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .videoText {
-    font-size: .8rem;
+    font-size: 1rem;
     text-align: left;
     margin-left: 10px;
 }
