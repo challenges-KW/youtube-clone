@@ -7,9 +7,9 @@ export const Video = (props) => {
             {props.video}
         </div>
         <div className='videoText'>
-            <h3 className='name'>
+            <h4 className='name'>
               {props.name}
-            </h3>
+            </h4>
             <p className='publisher'>
               {props.publisher}
             </p>
