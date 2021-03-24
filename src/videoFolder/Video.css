@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .videoText {
@@ -20,4 +21,27 @@
 .viewsDate
 {
     color: lightgrey;
+}
+
+@media (min-width: 768px) {
+    .theVideo {
+        flex-basis: 100%;
+        margin-bottom: 0;
+
+    }
+    .videoText {
+        width: 560px;
+        line-height: 5px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .videoText .name {
+        font-size: 1.6rem;
+    }
+
+    .videoText .publisher,
+    .viewsDate {
+        font-size: .9rem;
+    }
 }

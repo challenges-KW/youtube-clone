@@ -8,7 +8,7 @@ function App() {
       name: 'Beyonce - Hold Up',
       publisher: 'Beyonce',
       views: '200M',
-      date: '4'
+      date: 'Jan 29, 2019'
     } 
 
   //pass the data to its children as props
