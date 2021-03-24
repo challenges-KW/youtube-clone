@@ -7,8 +7,17 @@ export function Video(props) {
             {props.video}
         </div>
         <div className='videoText'>
-            <p className="text">
-              video text goes here
+            <h3 className='title'>
+              {props.videoName}
+            </h3>
+            <p className='publisher'>
+              {props.videoPublisher}
+            </p>
+            <p className='views'>
+              {props.videoViews}
+            </p>
+            <p className='publishDate'>
+              {props.date}
             </p>
         </div>
     </div>
