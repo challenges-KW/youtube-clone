@@ -1,27 +1,25 @@
 import './Video.css'
 
-export function Video(props) {
+export const Video = (props) => {
   return (
     <div className="videoWrapper">
         <div className='theVideo'>
             {props.video}
         </div>
         <div className='videoText'>
-            <h3 className='title'>
-              {props.videoName}
+            <h3 className='name'>
+              {props.name}
             </h3>
             <p className='publisher'>
-              {props.videoPublisher}
+              {props.publisher}
             </p>
             <p className='views'>
-              {props.videoViews}
+              {props.views} views
             </p>
             <p className='publishDate'>
-              {props.date}
+              {props.date} years ago
             </p>
         </div>
     </div>
   );
 }
-
-export default Video;
