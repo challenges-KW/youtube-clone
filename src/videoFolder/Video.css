@@ -6,8 +6,19 @@
 }
 
 .videoText {
-    color: white;
     font-size: 1rem;
     text-align: left;
     margin-left: 10px;
+    line-height: 7px;
+}
+
+.videoText .name {
+    color: white;
+}
+
+.videoText .publisher,
+.views, 
+.publishDate
+{
+    color: lightgrey;
 }
