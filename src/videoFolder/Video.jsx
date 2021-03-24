@@ -2,7 +2,7 @@ import './Video.css'
 
 export const Video = (props) => {
   return (
-    <div className="videoWrapper">
+    <div className='videoWrapper' data-testid='videoComp'>
         <div className='theVideo'>
             {props.video}
         </div>
@@ -13,7 +13,7 @@ export const Video = (props) => {
             <p className='publisher'>
               {props.publisher}
             </p>
-            <p className='views'>
+            <p className='viewsDate'>
               {props.views} views - {props.date} years ago
             </p>
         </div>
