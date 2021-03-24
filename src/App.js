@@ -4,7 +4,7 @@ import { Video } from './videoFolder/Video.jsx'
 function App() {
     //get the data
     let video1 = {
-      video: <a class="yt-simple-endpoint style-scope yt-formatted-string" spellcheck="false" href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbkdrZFp3eGJRallwWGtCSTl3TEJ5ZFdJZm5NZ3xBQ3Jtc0tuM2xteUE3VTJNdGV1dFVoWGhqWVBGanRyYlRZbzZNVExtQmVEX2xfM2otX1lmMXQ5SThjVjdjX2NjZjdiemk1UzlsTlpvREdCZHVOS3JmdTFTeFNna1czcjRWUVpmcjV4OGc3cXpXTmZBWlBLVS1Qdw&amp;q=https%3A%2F%2Flemonade.tidal.com" rel="nofollow" target="_blank" dir="auto">https://lemonade.tidal.com</a>,
+      video: <iframe width="560" height="315" src="https://www.youtube.com/embed/PeonBmeFR8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>,
       name: 'Beyonce - Hold Up',
       publisher: 'Beyonce',
       views: '200M',
