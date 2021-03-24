@@ -1,10 +1,12 @@
 .videoWrapper {
+    background-color: #282c34;
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
 .videoText {
+    color: white;
     font-size: 1rem;
     text-align: left;
     margin-left: 10px;
