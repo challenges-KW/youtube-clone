@@ -1,3 +1,5 @@
+import './Video.css'
+
 export function Video(props) {
   return (
     <div className="videoWrapper">
@@ -5,7 +7,9 @@ export function Video(props) {
             {props.video}
         </div>
         <div className='videoText'>
-            video text goes here
+            <p className="text">
+              video text goes here
+            </p>
         </div>
     </div>
   );
