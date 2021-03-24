@@ -10,6 +10,7 @@ function App() {
       views: '200M',
       date: '4'
     } 
+
   //pass the data to its children as props
   return (
     <div className="App">

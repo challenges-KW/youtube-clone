@@ -14,10 +14,7 @@ export const Video = (props) => {
               {props.publisher}
             </p>
             <p className='views'>
-              {props.views} views
-            </p>
-            <p className='publishDate'>
-              {props.date} years ago
+              {props.views} views - {props.date} years ago
             </p>
         </div>
     </div>
