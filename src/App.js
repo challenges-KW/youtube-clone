@@ -46,11 +46,13 @@ function App() {
   //pass the data to its children as props
   return (
     <div className="App">
-      <header className="App-header">
-        This will be a YouTube clone
-      </header>
-      {Video(video1)}
-      {videoList(videoPlaylist)}
+      <div className="App-header-div">
+        <header className="App-header">
+          this is a youTube clone
+        </header>
+        {Video(video1)}
+        {videoList(videoPlaylist)}
+      </div>
     </div>
   );
 }
