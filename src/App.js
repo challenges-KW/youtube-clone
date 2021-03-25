@@ -1,6 +1,6 @@
 import './App.css';
 import { Video } from './videoFolder/Video.jsx'
-import { videoList } from './videoList/videoList.jsx'
+import { VideoList } from './videoList/VideoList.jsx'
 
 function App() {
     //get the data
@@ -47,13 +47,13 @@ function App() {
   return (
     <div className="App">
       <div className="App-header-div">
-        <header className="App-header">
+        <header className="App-header" data-testid='header'>
           this is a youTube clone
         </header>
       </div>
       <div className="App-content">
         {Video(video1)}
-        {videoList(videoPlaylist)}
+        {VideoList(videoPlaylist)}
       </div>
     </div>
   );

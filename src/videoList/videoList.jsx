@@ -1,6 +1,8 @@
-import './videoList.css'
 
-export const videoList = (props) => {
+import './VideoList.css'
+import '../App'
+
+export const VideoList = (props) => {
     return (
         <div className ='videoListWrapper' data-testid='videoListWrapper'>
             <div className ='videoListVideo'>
