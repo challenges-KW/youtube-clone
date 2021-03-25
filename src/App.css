@@ -18,3 +18,10 @@
   font-family: 'Yeseva One', serif;
   padding-bottom: 5vh;
 }
+
+.App-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row;
+}

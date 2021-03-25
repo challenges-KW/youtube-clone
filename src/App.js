@@ -50,6 +50,8 @@ function App() {
         <header className="App-header">
           this is a youTube clone
         </header>
+      </div>
+      <div className="App-content">
         {Video(video1)}
         {videoList(videoPlaylist)}
       </div>
