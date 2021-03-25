@@ -18,6 +18,10 @@ export const videoList = (props) => {
             <div className='videoListDate'>
                 {props[0].date}
             </div>
+
+            <div className ='videoListVideo'>
+                {props[1].video}
+            </div>
             <div className ='videoListName'>
                 {props[1].name}
             </div>
@@ -30,6 +34,10 @@ export const videoList = (props) => {
             <div className='videoListDate'>
                 {props[1].date}
             </div>
+
+            <div className ='videoListVideo'>
+                {props[2].video}
+            </div>
             <div className ='videoListName'>
                 {props[2].name}
             </div>
@@ -41,6 +49,10 @@ export const videoList = (props) => {
             </div>
             <div className='videoListDate'>
                 {props[2].date}
+            </div>
+
+            <div className ='videoListVideo'>
+                {props[3].video}
             </div>
             <div className ='videoListName'>
                 {props[3].name}
