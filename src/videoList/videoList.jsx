@@ -13,10 +13,7 @@ export const videoList = (props) => {
                 {props[0].publisher}
             </div>
             <div className='videoListViews'>
-                {props[0].views}
-            </div>
-            <div className='videoListDate'>
-                {props[0].date}
+                {props[0].views} - {props[0].date} years ago
             </div>
 
             <div className ='videoListVideo'>
@@ -29,10 +26,7 @@ export const videoList = (props) => {
                 {props[1].publisher}
             </div>
             <div className='videoListViews'>
-                {props[1].views}
-            </div>
-            <div className='videoListDate'>
-                {props[1].date}
+                {props[1].views} - {props[1].date} years ago
             </div>
 
             <div className ='videoListVideo'>
@@ -45,10 +39,7 @@ export const videoList = (props) => {
                 {props[2].publisher}
             </div>
             <div className='videoListViews'>
-                {props[2].views}
-            </div>
-            <div className='videoListDate'>
-                {props[2].date}
+                {props[2].views} - {props[2].date} years ago
             </div>
 
             <div className ='videoListVideo'>
@@ -61,10 +52,7 @@ export const videoList = (props) => {
                 {props[3].publisher}
             </div>
             <div className='videoListViews'>
-                {props[3].views}
-            </div>
-            <div className='videoListDate'>
-                {props[3].date}
+                {props[3].views} - {props[3].date} years ago
             </div>
 
         </div>

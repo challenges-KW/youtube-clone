@@ -5,8 +5,7 @@
 }
 
 .videoListPublisher,
-.videoListViews,
-.videoListDate {
+.videoListViews {
     color: lightgray;
     font-size: .7rem;
 }
