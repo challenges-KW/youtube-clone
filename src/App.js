@@ -14,31 +14,31 @@ function App() {
 
     let videoPlaylist = [
       {
-        video: 'video',
-        name: '(You Drive Me) Crazy',
+        video: <iframe width="140" height="78.75" src="https://www.youtube.com/embed/IGrV5mvlY8w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
+        name: 'Overprotected',
         publisher: 'Britney Spears',
-        views: '141M',
+        views: '741M',
         date: 11
       }, 
       {
         video: 'video',
         name: 'How Will I Know',
         publisher: 'Whitney Houston',
-        views: '151M',
+        views: '851M',
         date: 10
       }, 
       {
         video: 'video',
         name: 'Always Be My Baby',
         publisher: 'Mariah Carey',
-        views: '200M',
+        views: '900M',
         date: 9
       }, 
       {
         video: 'video',
         name: 'We Found Love',
         publisher: 'Rihanna',
-        views: '900M',
+        views: '960M',
         date: 8
       }, 
     ]

@@ -3,6 +3,9 @@ import './videoList.css'
 export const videoList = (props) => {
     return (
         <div className ='videoListWrapper' data-testid='videoListWrapper'>
+            <div className ='videoListVideo'>
+                {props[0].video}
+            </div>
             <div className ='videoListName'>
                 {props[0].name}
             </div>
