@@ -1,0 +1,12 @@
+.videoListName {
+    color: white;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.videoListPublisher,
+.videoListViews,
+.videoListDate {
+    color: lightgray;
+    font-size: .7rem;
+}
