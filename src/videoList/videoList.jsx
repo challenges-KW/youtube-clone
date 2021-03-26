@@ -1,5 +1,5 @@
 
-import './VideoList.css'
+import './videoList.css'
 import '../App'
 
 export const VideoList = (props) => {

@@ -1,6 +1,6 @@
 import './App.css';
 import { Video } from './videoFolder/Video.jsx'
-import { VideoList } from './videoList/VideoList.jsx'
+import { VideoList } from './videoList/videoList.jsx'
 
 function App() {
     //get the data
