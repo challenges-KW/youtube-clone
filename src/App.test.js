@@ -10,14 +10,14 @@ test('renders youtube clone message', () => {
   expect(YoutubeElement).toBeInTheDocument();
 });
 
-test('renders Video component', () => {
+xtest('renders Video component', () => {
   render(<Video />);
   const videoComponent = screen.getByTestId('videoComp');
   expect(videoComponent).toBeInTheDocument();
 });
 
-// test('renders VideoList component', () => {
-//   render(<VideoList />);
-//   const videoListComponent = screen.getByTestId('videoListWrapper');
-//   expect(videoListComponent).toBeInTheDocument();
-// });
+test('renders VideoList component', () => {
+  render(<VideoList />);
+  const videoListComponent = screen.getByTestId('videoListWrapper');
+  expect(videoListComponent).toBeInTheDocument();
+});

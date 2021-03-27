@@ -1,9 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import { VideoList } from './VideoList';
-  
 
-test('renders container', () => {
-  render(<VideoList />);
+
+
+test('renders wrapper', () => {
+  render(<VideoList/>);
+
   const videoListWrapper = screen.getByTestId('videoListWrapper');
   expect(videoListWrapper).toBeInTheDocument();
 });

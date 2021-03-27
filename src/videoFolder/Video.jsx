@@ -4,17 +4,17 @@ export const Video = (props) => {
   return (
     <div className='videoWrapper' data-testid='videoComp'>
         <div className='theVideo' data-testid='videoClip'>
-            {props.video}
+            {props.vid.video}
         </div>
         <div className='videoText'>
             <p className='name' data-testid='videoName'>
-              {props.name}
+              {props.vid.name}
             </p>
             <p className='publisher' data-testid='videoPublisher'>
-              {props.publisher}
+              {props.vid.publisher}            
             </p>
             <p className='viewsDate' data-testid='videoViewsDate'>
-              {props.views} views - {props.date}
+              {props.vid.date}
             </p>
         </div>
     </div>

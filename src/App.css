@@ -17,6 +17,12 @@
   color: white;
   font-family: 'Yeseva One', serif;
   padding-bottom: 5vh;
+  white-space:nowrap;
+}
+
+span {
+  color: slateblue;
+  white-space: nowrap;
 }
 
 .App-content {
@@ -24,4 +30,8 @@
   justify-content: center;
   align-items: flex-start;
   flex-flow: row;
+}
+
+li {
+  list-style: none;
 }
