@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
-
+import { videoPlaylist } from './data'
 
 test('renders youtube clone message', () => {
   render(<App />);
@@ -10,8 +10,8 @@ test('renders youtube clone message', () => {
   expect(YoutubeElement).toBeInTheDocument();
 });
 
-xtest('renders Video component', () => {
-  render(<Video />);
+test('renders Video component', () => {
+  render(<Video vid={videoPlaylist[0]} />);
   const videoComponent = screen.getByTestId('videoComp');
   expect(videoComponent).toBeInTheDocument();
 });
