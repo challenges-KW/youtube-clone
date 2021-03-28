@@ -5,15 +5,26 @@
 
 .app-header {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  font-size: 10vh;
-  color: black;
   padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
+
+.app-header-icon {
+  color: dimgray;
+  margin-right: 20px;
+}
+
+.app-header-left {
+  align-items: flex-start;
 }
 
 .app-logo {
-  height: 30px;
+  height: 25px;
   margin-left: 3vh;
 }
 

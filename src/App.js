@@ -17,21 +17,24 @@ function App() {
     <div className='app'>
       <div className='app-header' data-testid='header'>
         <div className='app-header-left'>
-          <MenuIcon />
+          <MenuIcon className='app-header-icon' />
           <img 
             className='app-logo'
-            src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/640px-Logo_of_YouTube_%282015-2017%29.svg.png' 
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png' 
             alt='YouTube logo' 
           />
         </div>
         <div className='app-header-middle'>
-          <input type="text" />
+          <input 
+            type='text'
+            placeholder='Search'
+          />
           <SearchIcon className='app-inputButton' />
         </div>
         <div className='app-header-right'>
-          <VideoCallIcon />
-          <AppsIcon />
-          <NotificationsIcon />
+          <VideoCallIcon className='app-header-icon'/>
+          <AppsIcon className='app-header-icon'/>
+          <NotificationsIcon className='app-header-icon'/>
         </div>
       </div>
       <div className="app-content">
