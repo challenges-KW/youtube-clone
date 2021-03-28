@@ -15,9 +15,7 @@ function App() {
   //pass the data to its children as props
   return (
     <div className="app">
-      <div className="app-header-div">
-        <header className="app-header"  
-          data-testid='header'>
+      <div className="app-header" data-testid='header'>
             <MenuIcon />
             <img 
               classname='app-logo'
@@ -29,7 +27,6 @@ function App() {
             <VideoCallIcon />
             <AppsIcon />
             <NotificationsIcon />
-        </header>
       </div>
       <div className="app-content">
       <Video vid={videoPlaylist[0]} />

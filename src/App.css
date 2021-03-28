@@ -4,20 +4,15 @@
 }
 
 .app-header {
-  /* display: flex;
-  flex-direction: column;
+  display: flex;
   align-items: center;
-  justify-content: center; */
   font-size: 10vh;
   color: black;
-  font-family: 'Yeseva One', serif;
   padding-bottom: 5vh;
-  white-space:nowrap;
 }
 
-span {
-  color: slateblue;
-  white-space: nowrap;
+img {
+  height: 30px;
 }
 
 .app-content {
