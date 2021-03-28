@@ -1,20 +1,15 @@
 .app {
-  text-align: center;
-  background-color: #282c34;
+  background-color: white;
   margin-top: 0;
 }
 
-.app-header-div {
-  padding-top: 5vh;
-}
-
 .app-header {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   font-size: 10vh;
-  color: white;
+  color: black;
   font-family: 'Yeseva One', serif;
   padding-bottom: 5vh;
   white-space:nowrap;
