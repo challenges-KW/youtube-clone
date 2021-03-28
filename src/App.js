@@ -14,19 +14,25 @@ function App() {
 
   //pass the data to its children as props
   return (
-    <div className="app">
-      <div className="app-header" data-testid='header'>
-            <MenuIcon />
-            <img 
-              classname='app-logo'
-              src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/640px-Logo_of_YouTube_%282015-2017%29.svg.png' 
-              alt='YouTube logo' 
-            />
-            <input type="text" />
-            <SearchIcon />
-            <VideoCallIcon />
-            <AppsIcon />
-            <NotificationsIcon />
+    <div className='app'>
+      <div className='app-header' data-testid='header'>
+        <div className='app-header-left'>
+          <MenuIcon />
+          <img 
+            className='app-logo'
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/640px-Logo_of_YouTube_%282015-2017%29.svg.png' 
+            alt='YouTube logo' 
+          />
+        </div>
+        <div className='app-header-middle'>
+          <input type="text" />
+          <SearchIcon className='app-inputButton' />
+        </div>
+        <div className='app-header-right'>
+          <VideoCallIcon />
+          <AppsIcon />
+          <NotificationsIcon />
+        </div>
       </div>
       <div className="app-content">
       <Video vid={videoPlaylist[0]} />

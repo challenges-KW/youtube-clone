@@ -1,18 +1,44 @@
 .app {
   background-color: white;
-  margin-top: 0;
+  margin: 0;
 }
 
 .app-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 10vh;
   color: black;
-  padding-bottom: 5vh;
+  padding: 20px;
 }
 
-img {
+.app-logo {
   height: 30px;
+  margin-left: 3vh;
+}
+
+.app-header-middle {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border: 1px solid lightgray;
+}
+
+.app-header-middle > input {
+  flex: 1;
+  border: none;
+}
+
+.app-inputButton {
+  width: 50px !important;
+  background-color: #fafafa;
+  border-left: 1px solid lightgray;
+  color: gray;
+}
+
+.app-header-right {
+  display: flex;
+  align-items: center;
 }
 
 .app-content {
