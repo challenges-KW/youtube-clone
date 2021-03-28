@@ -9,13 +9,13 @@ function App() {
 
   //pass the data to its children as props
   return (
-    <div className="App">
-      <div className="App-header-div">
-        <header className="App-header" data-testid='header'>
+    <div className="app">
+      <div className="app-header-div">
+        <header className="app-header" data-testid='header'>
           this is a youTube clone
         </header>
       </div>
-      <div className="App-content">
+      <div className="app-content">
       <Video vid={videoPlaylist[0]} />
       <VideoList vidList={videoPlaylist}/>
       </div>
@@ -24,3 +24,5 @@ function App() {
 }
 
 export default App;
+
+// 

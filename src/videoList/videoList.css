@@ -1,7 +1,7 @@
 .videoListWrapper {
     text-align: left;
     position: relative;
-    left: -255px;
+    left: 0px;
 }
 
 .videoListName {

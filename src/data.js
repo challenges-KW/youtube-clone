@@ -1,12 +1,14 @@
 export const videoPlaylist = [
     {
+      id: 0,
       video: <iframe width="140" height="78.75" src="https://www.youtube.com/embed/PeonBmeFR8o" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
-    name: 'Beyonce - Hold Up',
-    publisher: 'Beyonce',
-    views: '200M',
-    date: 'Jan 29, 2019'
+      name: 'Beyonce - Hold Up',
+      publisher: 'Beyonce',
+      views: '200M',
+      date: 'Jan 29, 2019'
   },
     {
+      id: 1,
       video: <iframe width="140" height="78.75" src="https://www.youtube.com/embed/IGrV5mvlY8w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       name: 'Overprotected',
       publisher: 'Britney Spears',
@@ -14,6 +16,7 @@ export const videoPlaylist = [
       date: 11
     }, 
     {
+      id: 2,
       video: <iframe width="140" height="78.75" src="https://www.youtube.com/embed/m3-hY-hlhBg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       name: 'How Will I Know',
       publisher: 'Whitney Houston',
@@ -21,6 +24,7 @@ export const videoPlaylist = [
       date: 10
     }, 
     {
+      id: 3,
       video: <iframe width="140" height="78.75" src="https://www.youtube.com/embed/LfRNRymrv9k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       name: 'Always Be My Baby',
       publisher: 'Mariah Carey',
@@ -28,6 +32,7 @@ export const videoPlaylist = [
       date: 9
     }, 
     {
+      id: 4,
       video: <iframe width="140" height="78.75" src="https://www.youtube.com/embed/tg00YEETFzg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       name: 'We Found Love',
       publisher: 'Rihanna',
