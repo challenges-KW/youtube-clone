@@ -1,17 +1,21 @@
 .videoListWrapper {
-    text-align: left;
-    position: relative;
-    left: 0px;
+    flex: 0.3;
+    margin-left: 25px;
+    display: flex;
+}
+
+.videoListVideo {
+    display: flex;
 }
 
 .videoListName {
     color: white;
     font-weight: bold;
-    font-size: .8rem;
+    font-size: .1rem;
 }
 
 .videoListPublisher,
 .videoListViews {
     color: lightgray;
-    font-size: .7rem;
+    font-size: .4rem;
 }

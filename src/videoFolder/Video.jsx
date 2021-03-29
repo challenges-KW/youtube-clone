@@ -1,6 +1,6 @@
 import './Video.css'
 
-export const Video = (props) => {
+export const Video = ( props ) => {
   return (
     <div className='videoWrapper' data-testid='videoComp'>
         <div className='theVideo' data-testid='videoClip'>
@@ -14,7 +14,7 @@ export const Video = (props) => {
               {props.vid.publisher}            
             </p>
             <p className='viewsDate' data-testid='videoViewsDate'>
-              {props.vid.date}
+              {props.vid.views} views • {props.vid.date}
             </p>
         </div>
     </div>

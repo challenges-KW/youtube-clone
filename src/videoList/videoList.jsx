@@ -1,24 +1,23 @@
+import React, {useState} from 'react'
 import '../App'
 import { Video } from '../videoFolder/Video'
 import { videoPlaylist } from '../data'
-import './VideoList.css'
+import './VideoList.css';
+
 
 export const VideoList = (props) => {
-    function clickHandler() {
-        console.log('Button clicked')
-    }
+    const [todos, setTodos] = useState( {videoPlaylist})
+
     return (
         <div className ='videoListWrapper' data-testid='videoListWrapper'>
-            <ul className ='videoListVideo'>
-                <button onClick={clickHandler}>click</button>
-               <li> 
+            <div className ='videoListVideo'>
+               <div> 
                    {props.vidList.map((video, index) => {
                    return  <Video key={index} vid={video} />
-                   
                     })}
 
-                </li>
-            </ul>
+                </div>
+            </div>
 
         </div>
     );

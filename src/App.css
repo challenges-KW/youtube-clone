@@ -66,10 +66,20 @@
   justify-content: center;
   align-items: flex-start;
   flex-flow: row;
+  padding: 10px 20px;
+  padding-bottom: 0;
 }
 
 .app-sidebar {
   flex: 0.2;
+}
+
+.app-sidebar > hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .app-sidebarRow {
@@ -92,7 +102,6 @@
 .app-sidebarRow:hover > .app-sidebarRow-icon {
   color: red;
 }
-
 
 .app-sidebarRow-title {
   flex: 1;

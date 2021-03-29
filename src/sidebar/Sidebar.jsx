@@ -21,6 +21,7 @@ export default function Sidebar() {
                 Icon={SubscriptionsIcon}
                 title='Subscriptions' 
             />
+            <hr />
             <SidebarRow
                 Icon={LibraryIcon} 
                 title='Library' 
