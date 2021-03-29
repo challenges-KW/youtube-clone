@@ -9,7 +9,9 @@ export default function Header() {
     return (
       <div className='app-header' data-testid='header'>
         <div className='app-header-left'>
-          <MenuIcon className='app-header-icon' />
+          <MenuIcon 
+            className='app-header-left-icon' 
+          />
           <img 
             className='app-logo'
             src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png' 
@@ -27,13 +29,13 @@ export default function Header() {
         </div>
         <div className='app-header-right'>
           <VideoCallIcon 
-            className='app-header-icon'
+            className='app-header-right-icon'
           />
           <AppsIcon 
-            className='app-header-icon'
+            className='app-header-right-icon'
           />
           <NotificationsIcon  
-            className='app-header-icon'
+            className='app-header-right-icon'
           />
         </div>
       </div>

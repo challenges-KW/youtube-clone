@@ -14,17 +14,16 @@
   background-color: white;
 }
 
-.app-header-icon {
-  color: dimgray;
-  margin-right: 20px;
-}
-
 .app-header-left {
   align-items: flex-start;
 }
 
+.app-header-left-icon {
+  color: dimgray;
+}
+
 .app-logo {
-  height: 25px;
+  height: 1.2rem;
   margin-left: 3vh;
 }
 
@@ -52,11 +51,54 @@
   align-items: center;
 }
 
+.app-header-right-icon {
+  color: dimgray;
+  margin-right: 20px;
+}
+
+.app-body {
+  display: flex;
+}
+
 .app-content {
   display: flex;
+  flex: 0.8;
   justify-content: center;
   align-items: flex-start;
   flex-flow: row;
+}
+
+.app-sidebar {
+  flex: 0.2;
+}
+
+.app-sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 2px 20px;
+}
+
+.app-sidebarRow:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.app-sidebarRow-icon {
+  color: dimgray;
+  font-size: large !important;
+
+}
+
+.app-sidebarRow:hover > .app-sidebarRow-icon {
+  color: red;
+}
+
+
+.app-sidebarRow-title {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 li {
