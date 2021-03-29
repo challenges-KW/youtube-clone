@@ -5,11 +5,9 @@ import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
-
-
 export default function Header() {
     return (
-        <div className='app-header' data-testid='header'>
+      <div className='app-header' data-testid='header'>
         <div className='app-header-left'>
           <MenuIcon className='app-header-icon' />
           <img 
@@ -23,13 +21,21 @@ export default function Header() {
             type='text'
             placeholder='Search'
           />
-          <SearchIcon className='app-inputButton' />
+          <SearchIcon 
+            className='app-inputButton' 
+          />
         </div>
         <div className='app-header-right'>
-          <VideoCallIcon className='app-header-icon'/>
-          <AppsIcon className='app-header-icon'/>
-          <NotificationsIcon className='app-header-icon'/>
+          <VideoCallIcon 
+            className='app-header-icon'
+          />
+          <AppsIcon 
+            className='app-header-icon'
+          />
+          <NotificationsIcon  
+            className='app-header-icon'
+          />
         </div>
       </div>
     )
-}
+  };
