@@ -1,8 +1,8 @@
 .videoWrapper {
-    flex: 0.7;
-    background-color: #282c34;
+    flex: 0.55;
+    background-color: white;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
 }
@@ -15,34 +15,11 @@
 }
 
 .videoText .name {
-    color: white;
+    color: black;
 }
 
 .videoText .publisher,
 .viewsDate
 {
-    color: lightgrey;
-}
-
-@media (min-width: 768px) {
-    .theVideo {
-        flex-basis: 100%;
-        margin-bottom: 0;
-
-    }
-    .videoText {
-        width: 560px;
-        line-height: 5px;
-        margin-top: 0;
-        margin-left: 0;
-    }
-
-    .videoText .name {
-        font-size: 1.2rem;
-    }
-
-    .videoText .publisher,
-    .viewsDate {
-        font-size: .9rem;
-    }
+    color: dimgray;
 }

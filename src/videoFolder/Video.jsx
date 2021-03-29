@@ -1,4 +1,6 @@
+import React, {useState} from 'react'
 import './Video.css'
+import { VideoList } from '../videoList/VideoList';
 
 export const Video = ( props ) => {
   return (
