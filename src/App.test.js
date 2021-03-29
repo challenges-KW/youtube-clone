@@ -1,11 +1,14 @@
 import { render, screen } from '@testing-library/react';
+import Header from './header/Header';
 import App from './App';
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
-import { videoPlaylist } from './data'
+import { videoPlaylist } from './data';
+
+
 
 test('renders Header', () => {
-  render(<App />);
+  render(<Header />);
   const YoutubeElement = screen.getByTestId('header');
   expect(YoutubeElement).toBeInTheDocument();
 });
