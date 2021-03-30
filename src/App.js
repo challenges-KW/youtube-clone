@@ -1,6 +1,7 @@
+import React from 'react'
 import './App.css';
 import Header from './header/Header'
-import Sidebar from './sidebar/Sidebar'
+// import Sidebar from './sidebar/Sidebar'
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
 import {videoPlaylist} from './data'

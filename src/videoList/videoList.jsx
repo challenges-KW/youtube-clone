@@ -1,12 +1,17 @@
 import '../App'
+import React, { useState } from 'react'
 import { Video } from '../videoFolder/Video'
 import { videoPlaylist } from '../data'
-import './VideoList.css'
+import './VideoList.css';
 
 
 export const VideoList = ( {vidList} ) => {
 
-    
+    const [playSelected, setPlaySelected] = useState(false);
+
+    const onVideoClick = () => {
+        
+    };
 
     return (
         <div className ='videoListWrapper' data-testid='videoListWrapper'>
@@ -16,11 +21,11 @@ export const VideoList = ( {vidList} ) => {
                    return <Video 
                         key={index}
                         vid={video}
+                        onClick={onVideoClick}
                     />
                     })}
                 </div>
             </div>
-
         </div>
     );
 }
