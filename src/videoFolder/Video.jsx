@@ -2,21 +2,21 @@ import React, {useState} from 'react'
 import './Video.css'
 import { VideoList } from '../videoList/VideoList';
 
-export const Video = ( props ) => {
+export const Video = ( {vid} ) => {
   return (
     <div className='videoWrapper' data-testid='videoComp'>
         <div className='theVideo' data-testid='videoClip'>
-            {props.vid.video}
+            {vid.video}
         </div>
         <div className='videoText'>
             <p className='name' data-testid='videoName'>
-              {props.vid.name}
+              {vid.name}
             </p>
             <p className='publisher' data-testid='videoPublisher'>
-              {props.vid.publisher}            
+              {vid.publisher}            
             </p>
             <p className='viewsDate' data-testid='videoViewsDate'>
-              {props.vid.views} views • {props.vid.date}
+              {vid.views} views • {vid.date}
             </p>
         </div>
     </div>
