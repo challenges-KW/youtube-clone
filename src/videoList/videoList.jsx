@@ -2,6 +2,8 @@ import '../App'
 import React, { useState } from 'react'
 import { videoPlaylist } from '../data'
 import './VideoList.css';
+import MusicIcon from '@material-ui/icons/MusicNote'
+
 
 
 export const VideoList = ( {vidList} ) => {
@@ -35,26 +37,24 @@ export const VideoList = ( {vidList} ) => {
 
     return (
         <div className ='videoListWrapper' data-testid='videoListWrapper'>
-            <div className ='videoListVideo'>
-               <div>
-                   {vidList.map((video, index) => {
-                   return <div onClick={changeState} > 
-                                <div className='videoImage'>
-                                    {video.image}
-                                </div>
-                                <div className='videoName'>
-                                    {video.name}
-                                </div>
-                                <div className='videoPublisher'>
-                                    {video.publisher}
-                                </div>
-                                <div className='videoViews'>
-                                {video.views} views • {video.relativeDate} years ago
-                                </div>
-                            </div>
+            {vidList.map((video, index) => {
+                return <>
+                    <div className='videoImage' onClick={changeState}>
+                    {video.image}
+                    </div>
+                    <div className='videolistText'>
+                        <p className='videoName'>
+                            {video.name} 
+                        </p>
+                        <p className='videoPublisher'>
+                            {video.publisher} <MusicIcon className='icons' />
+                        </p>
+                        <p className='videoViews'>
+                            {video.views} views • {video.relativeDate} years ago
+                        </p>
+                    </div>
+                </>
                     })}
                 </div>
-            </div>
-        </div>
     );
 }
