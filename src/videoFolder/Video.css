@@ -5,6 +5,11 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+    margin-right: 25px;
+}
+
+.videoImage {
+    margin-right: 7px;
 }
 
 .videoText {

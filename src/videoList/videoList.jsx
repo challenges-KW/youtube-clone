@@ -47,7 +47,8 @@ export const VideoList = ( {vidList} ) => {
                             {video.name} 
                         </p>
                         <p className='videoPublisher'>
-                            {video.publisher} <MusicIcon className='icons' />
+                            {video.publisher} 
+                            <MusicIcon className='icons' />
                         </p>
                         <p className='videoViews'>
                             {video.views} views • {video.relativeDate} years ago
