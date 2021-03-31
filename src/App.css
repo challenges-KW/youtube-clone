@@ -19,7 +19,7 @@
 }
 
 .app-header-left-icon {
-  color: dimgray;
+  color: #606060;
 }
 
 .app-logo {
@@ -30,7 +30,7 @@
 .app-header-middle {
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 50%;
   border: 1px solid lightgray;
 }
 
@@ -46,13 +46,19 @@
   color: gray;
 }
 
+.app-inputText {
+  font-size: 1rem;
+  padding: 5px 10px;
+
+}
+
 .app-header-right {
   display: flex;
   align-items: center;
 }
 
 .app-header-right-icon {
-  color: dimgray;
+  color: #606060;
   margin-right: 20px;
 }
 
@@ -95,7 +101,7 @@
 }
 
 .app-sidebarRow-icon {
-  color: dimgray;
+  color: #606060;
   font-size: large !important;
 
 }

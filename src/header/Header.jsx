@@ -22,6 +22,7 @@ export default function Header() {
           <input 
             type='text'
             placeholder='Search'
+            className='app-inputText'
           />
           <SearchIcon 
             className='app-inputButton' 
