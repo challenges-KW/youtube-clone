@@ -8,18 +8,26 @@
 }
 
 .videoText {
-    font-size: 1rem;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 0px;
     line-height: 7px;
 }
 
 .videoText .name {
+    font-size: 1.1rem;
+    font-weight: 500;
     color: black;
 }
 
-.videoText .publisher,
-.viewsDate
-{
+.videoText .viewsDate {
+    font-size: .9rem;
     color: dimgray;
+}
+
+.videoWrapper > hr {
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;  
 }

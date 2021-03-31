@@ -1,17 +1,17 @@
 export const videoPlaylist = [
     {
       id: 0,
-      video: <iframe width="168" height="94.75" src="https://www.youtube.com/embed/PeonBmeFR8o" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
+      video: <iframe width="560" height="315" src="https://www.youtube.com/embed/PeonBmeFR8o" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       image: <img src='https://raw.githubusercontent.com/challenges-KW/youtube-clone/main/public/0.png' />,
-      name: 'Beyonce - Hold Up',
-      publisher: 'Beyonce',
+      name: 'Beyoncé - Hold Up',
+      publisher: 'Beyoncé',
       views: '200M',
       date: 'Jan 29, 2019',
       relativeDate: '2'
   },
     {
       id: 1,
-      video: <iframe width="168" height="94.75" src="https://www.youtube.com/embed/IGrV5mvlY8w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
+      video: <iframe width="560" height="315" src="https://www.youtube.com/embed/IGrV5mvlY8w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       image: <img src='https://raw.githubusercontent.com/challenges-KW/youtube-clone/main/public/1.png' alt='Overprotected video screenshot'/>,
       name: 'Overprotected',
       publisher: 'Britney Spears',
@@ -21,7 +21,7 @@ export const videoPlaylist = [
     }, 
     {
       id: 2,
-      video: <iframe width="168" height="94.75" src="https://www.youtube.com/embed/m3-hY-hlhBg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
+      video: <iframe width="560" height="315" src="https://www.youtube.com/embed/m3-hY-hlhBg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       image: <img src='https://raw.githubusercontent.com/challenges-KW/youtube-clone/main/public/2.png' alt='How Will I Know video screenshot'/>,
       name: 'How Will I Know',
       publisher: 'Whitney Houston',
@@ -31,7 +31,7 @@ export const videoPlaylist = [
     }, 
     {
       id: 3,
-      video: <iframe width="168" height="94.75" src="https://www.youtube.com/embed/LfRNRymrv9k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
+      video: <iframe width="560" height="315" src="https://www.youtube.com/embed/LfRNRymrv9k" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       image: <img src='https://raw.githubusercontent.com/challenges-KW/youtube-clone/main/public/3.png' alt='Always Be My Baby video screenshot' />,
       name: 'Always Be My Baby',
       publisher: 'Mariah Carey',
@@ -41,7 +41,7 @@ export const videoPlaylist = [
     }, 
     {
       id: 4,
-      video: <iframe width="168" height="94.75" src="https://www.youtube.com/embed/tg00YEETFzg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
+      video: <iframe width="560" height="315" src="https://www.youtube.com/embed/tg00YEETFzg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
       image: <img src='https://raw.githubusercontent.com/challenges-KW/youtube-clone/main/public/4.png' alt='We Found Love video screenshot' />,
       name: 'We Found Love',
       publisher: 'Rihanna',
