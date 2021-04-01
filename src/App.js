@@ -1,25 +1,32 @@
-import React from 'react'
-import './App.css';
+import React, { useState } from 'react'
 import Header from './header/Header'
-// import Sidebar from './sidebar/Sidebar'
+import Sidebar from './sidebar/Sidebar'
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
 import {videoPlaylist} from './data'
+import './App.css';
 
 
 function App() {
-    //get the data
 
+    const [selectedVideo, setSelectedVideo] =useState(videoPlaylist[0])
 
-  //pass the data to its children as props
+    const setVideo = (video) => {
+      setSelectedVideo(video)
+
+    }
+
   return (
     <div className='app'>
       <Header />
       <div className='app-body'>
-        {/* <Sidebar /> */}
+        <Sidebar />
         <div className='app-content'>
-          <Video vid={videoPlaylist[0]} />
-          <VideoList vidList={videoPlaylist}/>
+          <Video vid={selectedVideo} />
+          <VideoList 
+            vidList={videoPlaylist}
+            onVideoSelect={setVideo}
+          />
         </div>
       </div>
     </div>
