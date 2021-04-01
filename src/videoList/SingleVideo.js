@@ -1,23 +1,24 @@
 import React from 'react'
 import './VideoList.css';
+import MusicIcon from '@material-ui/icons/MusicNote'
 
 export const SingleVideo = ( props ) => {
-  console.log('this is vid: ', props)
   return (
-    <div  
-      className='videoWrapper' data-testid='videoComp'>
+    <div>
       <div className='videoImage' data-testid='videoClip'>
         {props.video.image}
       </div>
-      <div className='videoText'>
-        <p className='name' data-testid='videoName'>
+      <div className='videolistText'>
+        <p className='videoName' data-testid='videoName'>
           {props.video.name}
         </p>
-        <p className='viewsDate' data-testid='videoViewsDate'>
-              {props.video.views} views • {props.video.date}
+        <p className='videoPublisher' data-testid='videoName'>
+          {props.video.publisher} <MusicIcon className='icons'/>
+        </p>
+        <p className='videoViews' data-testid='videoViews'>
+              {props.video.views} views • {props.video.relativeDate} years ago
             </p>
         </div>
-      <hr></hr>
     </div>
   );
 }
