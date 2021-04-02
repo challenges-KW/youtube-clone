@@ -1,13 +1,15 @@
 .videoListWrapper {
-    background-color: snow;
     flex: 0.45;
-    /* margin-left: 25px; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
+.singleVideoSnippet {
+    display: flex;
+
+}
 
 .videolistText {
     text-align: left;

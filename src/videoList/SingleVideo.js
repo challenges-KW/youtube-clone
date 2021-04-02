@@ -4,7 +4,7 @@ import MusicIcon from '@material-ui/icons/MusicNote'
 
 export const SingleVideo = ( props ) => {
   return (
-    <div>
+    <div className='singleVideoSnippet'>
       <div className='videoImage' data-testid='videoClip'>
         {props.video.image}
       </div>
