@@ -3,7 +3,7 @@ import Header from './header/Header'
 import Sidebar from './sidebar/Sidebar'
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
-import {videoPlaylist} from './data'
+import { videoPlaylist } from './data'
 import './App.css';
 
 
@@ -12,8 +12,8 @@ function App() {
     const [selectedVideo, setSelectedVideo] =useState(videoPlaylist[0])
 
     const setVideo = (video) => {
+      console.log('video in setVideo:', video)
       setSelectedVideo(video)
-
     }
 
   return (

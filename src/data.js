@@ -2,7 +2,7 @@ export const videoPlaylist = [
     {
       id: 0,
       video: <iframe width="560" height="315" src="https://www.youtube.com/embed/PeonBmeFR8o" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>,
-      image: <img src='https://raw.githubusercontent.com/challenges-KW/youtube-clone/main/public/00.png' />,
+      image: <img src='https://raw.githubusercontent.com/challenges-KW/youtube-clone/main/public/00.png' alt='Hold Up video screenshot'/>,
       name: 'Beyoncé - Hold Up',
       publisher: 'Beyoncé',
       views: '200M',

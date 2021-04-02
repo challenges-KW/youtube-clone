@@ -7,12 +7,12 @@ export const VideoList = ( {vidList, onVideoSelect } ) => {
   
 
     return (
-        <div className ='videoListWrapper' data-testid='videoListWrapper' onClick={onVideoSelect}>
+        <div className ='videoListWrapper' data-testid='videoListWrapper'>
             {vidList.map((video, index) => {
                 return <SingleVideo 
                     key={index}
                     video={video}
-                    onClick={() => onVideoSelect(video)}
+                    onSingleVideoSelect={onVideoSelect}
                 />
             })}
                 </div>
