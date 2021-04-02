@@ -1,8 +1,6 @@
 import '../App'
-import React, { useState } from 'react'
+import React from 'react'
 import './VideoList.css';
-import MusicIcon from '@material-ui/icons/MusicNote'
-import { Video } from '../videoFolder/Video'
 import { SingleVideo } from './SingleVideo'
 
 export const VideoList = ( {vidList, onVideoSelect } ) => {
