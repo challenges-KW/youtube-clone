@@ -7,7 +7,7 @@ export const SingleVideo = ( { video, onSingleVideoSelect } ) => {
   return (
     <div className='singleVideoSnippet' onClick={() => onSingleVideoSelect(video) }>
       <div className='videoImage' data-testid='videoClip'>
-        {video.image}
+        {/*image src like in Video component*/}
       </div>
       <div className='videolistText'>
         <p className='videoName' data-testid='videoName'>

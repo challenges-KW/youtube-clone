@@ -6,7 +6,7 @@ export const Video = ({ vid }) => {
     <div  
       className='videoWrapper' data-testid='videoComp'>
       <div className='theVideo' data-testid='videoClip'>
-        {vid.video}
+      <iframe width="560" height="315" src={`https://www.youtube.com/embed/${vid.videoSource}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <div className='videoText'>
         <p className='name' data-testid='videoName'>
