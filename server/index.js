@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const port = 4000
  
-app.get('/', function (req, res) {
+app.get('/videos', function (req, res) {
   res.send(videoPlaylist)
 })
  
