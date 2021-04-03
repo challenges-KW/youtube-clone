@@ -5,9 +5,10 @@ const app = express()
 const port = 4000
  
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send(videoPlaylist)
 })
  
 app.listen(port, () => {
+    console.log('the app is running on port 4000:', port)
     4000
 })
