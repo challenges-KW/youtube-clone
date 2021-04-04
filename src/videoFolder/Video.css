@@ -1,11 +1,11 @@
 .videoWrapper {
     flex: 0.55;
-    background-color: white;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     margin-right: 25px;
+
 }
 
 .videoImage {

@@ -2,6 +2,7 @@ import React from 'react'
 import './Video.css'
 
 export const Video = ({ vid }) => {
+  
   return (
     <div  
       className='videoWrapper' data-testid='videoComp'>

@@ -119,8 +119,12 @@
 
 .app-loading {
   font-size: 1.5rem;
-  display: flex;
-  align-items: center;
   border: 1px solid;
-  padding: 20px;
+  width: 561px; 
+  height: 316px;
+  text-align: center;
+  padding-top: 50px;
+  flex: 0.55;
+  margin-right: 25px;
+
 }

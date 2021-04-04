@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Header from './header/Header'
 import Sidebar from './sidebar/Sidebar'
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
-// import { videoPlaylist } from '../server/index'
 import HourglassIcon from '@material-ui/icons/HourglassEmpty'
 import './App.css';
 
@@ -27,32 +26,34 @@ const setVideo = () => {
   getVideos()
   .then(response => {
     setVideos(response)
-    setSelectedVideo(videos[0])
-    console.log('selectedVideo: ', selectedVideo)
-
+    setSelectedVideo(response[0])
   })
 }
 
-// console.log('this is videos after setVideo onClick: ', videos)
+  useEffect(() => {
+  setVideo();
+}, []);
+
 
   return (
     <div className='app'>
       <Header />
       <div className='app-body'>
         <Sidebar />
-        <div className='app-content'>
-          <button variant='contained' color='primary' onClick={setVideo}>click here for a video</button>
+        <div className='app-content' >
+          {/* <button variant='contained' color='primary' onClick={setVideo}>click here for a video</button> */}
           {
             (selectedVideo !== undefined)
             ? <Video vid={selectedVideo} />
             : <div className='app-loading'><HourglassIcon/> Video is loading...</div>
           }
-          <VideoList vidList={videos} onClick={setVideos} onVideoSelect={setSelectedVideo}/>
+          <VideoList vidList={videos} onVideoSelect={setSelectedVideo}/>
         </div>
         
       </div>
     </div>
   );
+
 }
 
 export default App; 
