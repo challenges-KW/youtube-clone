@@ -116,3 +116,7 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+.app-loading {
+  font-size: 1.5rem;
+}

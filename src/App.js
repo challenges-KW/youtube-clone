@@ -4,8 +4,8 @@ import Sidebar from './sidebar/Sidebar'
 import { Video } from './videoFolder/Video'
 // import { VideoList } from './videoList/VideoList'
 // import { videoPlaylist } from './data'
+import HourglassIcon from '@material-ui/icons/HourglassEmpty'
 import './App.css';
-import Button from '@material-ui/core/Button';
 
 
 function App() {
@@ -13,17 +13,25 @@ function App() {
   const [videos, setVideos] =useState([]);
   const [selectedVideo, setSelectedVideo] =useState();
 
-  const setVideo = () => {
-    // console.log('video in setVideo: ', video)
-    // setSelectedVideo(video)
-    fetch('/videos')
+  const getVideos = async() => {
+    return await fetch('/videos')
     .then(res => {
-      console.log(res);
       return res.json()
     })
-  }
+    .then((fulfill) => {
+      return fulfill
+      })
+}
 
+const setVideo = () => {
+  getVideos()
+  .then(response => {
+    setVideos(response)
+    setSelectedVideo(selectedVideo[0])
+  })
+}
 
+console.log('this is videos after setVideo onClick: ', videos)
 
   return (
     <div className='app'>
@@ -31,9 +39,12 @@ function App() {
       <div className='app-body'>
         <Sidebar />
         <div className='app-content'>
-        <button variant='contained' color='primary' onClick={setVideo}>click here for a video</button>
-
-
+          <button variant='contained' color='primary' onClick={setVideo}>click here for a video</button>
+          {
+            (selectedVideo !== undefined)
+            ? <Video vid={selectedVideo} />
+            : <div className='app-loading'><HourglassIcon/> Video is loading...</div>
+          }
         </div>
         
       </div>
