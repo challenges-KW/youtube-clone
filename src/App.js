@@ -22,17 +22,19 @@ function App() {
       })
 }
 
-const setVideo = () => {
-  getVideos()
-  .then(response => {
-    setVideos(response)
-    setSelectedVideo(response[0])
-  })
-}
+
 
   useEffect(() => {
+    const setVideo = () => {
+      getVideos()
+      .then(response => {
+        setVideos(response)
+        setSelectedVideo(response[0])
+      })
+    }
   setVideo();
-}, []);
+}, []
+);
 
 
   return (
