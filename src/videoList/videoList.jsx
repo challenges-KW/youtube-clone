@@ -4,7 +4,6 @@ import './VideoList.css';
 import { SingleVideo } from './SingleVideo'
 
 export const VideoList = ( {vidList, onVideoSelect } ) => {
-  
 
     return (
         <div className ='videoListWrapper' data-testid='videoListWrapper'>

@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import Header from './header/Header'
 import Sidebar from './sidebar/Sidebar'
 import { Video } from './videoFolder/Video'
-// import { VideoList } from './videoList/VideoList'
-// import { videoPlaylist } from './data'
+import { VideoList } from './videoList/VideoList'
+// import { videoPlaylist } from '../server/index'
 import HourglassIcon from '@material-ui/icons/HourglassEmpty'
 import './App.css';
 
@@ -27,11 +27,13 @@ const setVideo = () => {
   getVideos()
   .then(response => {
     setVideos(response)
-    setSelectedVideo(selectedVideo[0])
+    setSelectedVideo(videos[0])
+    console.log('selectedVideo: ', selectedVideo)
+
   })
 }
 
-console.log('this is videos after setVideo onClick: ', videos)
+// console.log('this is videos after setVideo onClick: ', videos)
 
   return (
     <div className='app'>
@@ -45,6 +47,7 @@ console.log('this is videos after setVideo onClick: ', videos)
             ? <Video vid={selectedVideo} />
             : <div className='app-loading'><HourglassIcon/> Video is loading...</div>
           }
+          <VideoList vidList={videos} onClick={setVideos} onVideoSelect={setSelectedVideo}/>
         </div>
         
       </div>

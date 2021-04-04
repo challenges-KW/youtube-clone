@@ -3,7 +3,6 @@ import './VideoList.css';
 import MusicIcon from '@material-ui/icons/MusicNote'
 
 export const SingleVideo = ( { video, onSingleVideoSelect } ) => {
-  // console.log('this is inside the single video component:',video.name)
   return (
     <div className='singleVideoSnippet' onClick={() => onSingleVideoSelect(video) }>
       <div className='videoImage' data-testid='videoClip'>
