@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import Header from './header/Header';
+import Sidebar from './sidebar/Sidebar'
 import App from './App';
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
 import { videoPlaylist } from './data';
-
 
 
 test('renders Header', () => {
@@ -13,8 +13,14 @@ test('renders Header', () => {
   expect(YoutubeElement).toBeInTheDocument();
 });
 
-test('renders Video component', () => {
-  render(<Video vid={videoPlaylist[0]} />);
+test('renders Sidebar', () => {
+  render(<Sidebar />);
+  const YoutubeElement = screen.getByTestId('sidebar');
+  expect(YoutubeElement).toBeInTheDocument();
+});
+
+xtest('renders Video component', () => {
+  render(<Video vid={selectedVideo} />);
   const videoComponent = screen.getByTestId('videoComp');
   expect(videoComponent).toBeInTheDocument();
 });

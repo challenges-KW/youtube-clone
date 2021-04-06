@@ -1,15 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { VideoList } from './VideoList';
-import { videoPlaylist } from '../data';
-
-
-beforeEach(() => {
-  render(<VideoList vidList={videoPlaylist} />
-    )
-});
 
 test('renders wrapper', () => {
-  render(<VideoList vidList={videoPlaylist} />);
+  render(<VideoList vidList={videos} onVideoSelect={setSelectedVideo}/>);
   const videoListWrapper = screen.getByTestId('videoListWrapper');
   expect(videoListWrapper).toBeInTheDocument();
 });

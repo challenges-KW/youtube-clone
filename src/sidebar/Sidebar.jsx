@@ -8,7 +8,7 @@ import '../App.css'
 
 export default function Sidebar() {
     return (
-        <div className='app-sidebar'>
+        <div className='app-sidebar' data-testid='sidebar'>
             <SidebarRow 
                 Icon={HomeIcon} 
                 title='Home'

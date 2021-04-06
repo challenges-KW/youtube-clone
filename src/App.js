@@ -43,7 +43,6 @@ function App() {
       <div className='app-body'>
         <Sidebar />
         <div className='app-content' >
-          {/* <button variant='contained' color='primary' onClick={setVideo}>click here for a video</button> */}
           {
             (selectedVideo !== undefined)
             ? <Video vid={selectedVideo} />
