@@ -5,7 +5,7 @@ module.exports = [
       imageId: '00.png',
       name: 'Hold Up',
       publisher: 'Beyoncé',
-      views: '200M',
+      views: '950M',
       date: 'Jan 29, 2019',
       relativeDate: '2'
   },
@@ -15,7 +15,7 @@ module.exports = [
       imageId: '1.png',
       name: 'Overprotected',
       publisher: 'Britney Spears',
-      views: '741M',
+      views: '941M',
       date: 'July 28, 2003',
       relativeDate: '18'
     }, 
@@ -25,7 +25,7 @@ module.exports = [
       imageId: '2.png',
       name: 'How Will I Know',
       publisher: 'Whitney Houston',
-      views: '851M',
+      views: '951M',
       date: 'November, 22, 1985',
       relativeDate: '35'
     }, 
