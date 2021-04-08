@@ -3,7 +3,7 @@ module.exports = [
       id: 0,
       videoSource: 'PeonBmeFR8o',
       imageId: '00.png',
-      name: 'Beyoncé - Hold Up',
+      name: 'Hold Up',
       publisher: 'Beyoncé',
       views: '200M',
       date: 'Jan 29, 2019',
