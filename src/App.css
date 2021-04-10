@@ -79,6 +79,7 @@
 
 .app-sidebar {
   flex: 0.2;
+  transform: translateX(-100%);
 }
 
 .app-sidebar > hr {
