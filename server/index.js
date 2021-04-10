@@ -19,7 +19,7 @@ app.get('/videos', function (req, res) {
 //create tables
 const queryString = 'CREATE TABLE IF NOT EXISTS videonames (videoId VARCHAR, name VARCHAR, publisher VARCHAR);'
 //insert data -- do with a loop
-const queryString2 = `INSERT INTO videonames(videoId, name, publisher) values('IGrV5mvlY8w', 'Overprotected', 'Britney Spears');`
+const queryString2 = `INSERT INTO videonames(videoId, name, publisher) values('tg00YEETFzg', 'We Found Love', 'Rihanna');`
 //get data
 const queryString3 ='select * from videonames'
 //delete tables
