@@ -17,7 +17,7 @@ app.get('/videos', function (req, res) {
 
 
 //create tables
-const queryString = 'CREATE TABLE IF NOT EXISTS videonames (videoId VARCHAR, name VARCHAR, publisher VARCHAR);'
+const queryString = 'CREATE TABLE IF NOT EXISTS videodata (videoId VARCHAR, imageId VARCHAR, views VARCHAR, date VARCHAR, relativeDate VARCHAR);'
 //insert data -- do with a loop
 const queryString2 = `INSERT INTO videonames(videoId, name, publisher) values('tg00YEETFzg', 'We Found Love', 'Rihanna');`
 //get data
@@ -26,7 +26,7 @@ const queryString3 ='select * from videonames'
 const queryString4 = 'drop table videodata'
 
 app.get('/api', (req, resp) => {
-  client.query(queryString2, (err, res) => {
+  client.query(queryString, (err, res) => {
     if (err) throw err
     resp.send(res)
     client.end()
