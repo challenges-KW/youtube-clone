@@ -1,7 +1,7 @@
 module.exports = [
     {
       id: 0,
-      videoSource: 'PeonBmeFR8o',
+      videoId: 'PeonBmeFR8o',
       imageId: '00.png',
       name: 'Hold Up',
       publisher: 'Beyoncé',
@@ -11,7 +11,7 @@ module.exports = [
   },
     {
       id: 1,
-      videoSource: 'IGrV5mvlY8w',
+      videoId: 'IGrV5mvlY8w',
       imageId: '1.png',
       name: 'Overprotected',
       publisher: 'Britney Spears',
@@ -21,7 +21,7 @@ module.exports = [
     }, 
     {
       id: 2,
-      videoSource: 'm3-hY-hlhBg',
+      videoId: 'm3-hY-hlhBg',
       imageId: '2.png',
       name: 'How Will I Know',
       publisher: 'Whitney Houston',
@@ -31,7 +31,7 @@ module.exports = [
     }, 
     {
       id: 3,
-      videoSource: 'LfRNRymrv9k',
+      videoId: 'LfRNRymrv9k',
       imageId: '3.png',
       name: 'Always Be My Baby',
       publisher: 'Mariah Carey',
@@ -41,7 +41,7 @@ module.exports = [
     }, 
     {
       id: 4,
-      videoSource: 'tg00YEETFzg',
+      videoId: 'tg00YEETFzg',
       imageId: '4.png',
       name: 'We Found Love',
       publisher: 'Rihanna',

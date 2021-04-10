@@ -1,9 +1,0 @@
-{
-  "name": "node-postgres",
-  "version": "1.0.0",
-  "description": "youtube videos",
-  "main": "index.js",
-  "author": "Katarzyna-KW",
-  "license": "MIT",
-  "private": false
-}

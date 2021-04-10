@@ -5,12 +5,14 @@ import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
-export default function Header() {
+export default function Header({open, setOpen}) {
     return (
       <div className='app-header' data-testid='header'>
         <div className='app-header-left'>
           <MenuIcon 
-            className='app-header-left-icon' 
+            className='app-header-left-icon'
+            open={ open }
+            // onClick={() => setOpen(!open)}
           />
           <img 
             className='app-logo'

@@ -6,11 +6,14 @@ import { VideoList } from './videoList/VideoList'
 import HourglassIcon from '@material-ui/icons/HourglassEmpty'
 import './App.css';
 
+require('dotenv').config()
+
 
 function App() {
 
   const [videos, setVideos] =useState([]);
   const [selectedVideo, setSelectedVideo] =useState();
+  const [open, setOpen] = useState(false);
 
   const getVideos = async() => {
     return await fetch('/videos')
@@ -41,7 +44,7 @@ function App() {
     <div className='app'>
       <Header />
       <div className='app-body'>
-        <Sidebar />
+        {/* <Sidebar open={open} setOpen={setOpen} /> */}
         <div className='app-content' >
           {
             (selectedVideo !== undefined)

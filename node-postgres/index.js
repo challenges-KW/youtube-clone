@@ -1,21 +1,21 @@
-const express = require('express')
-const app = express()
-const port = 3001
 
-app.use(express.json())
-app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3001');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
-    next();
-  });
+// const { REACT_APP_HOST, REACT_APP_PORT, REACT_APP_USER, REACT_APP_PASSWORD } = require('../k.env')
 
-app.get('/', (req, res) => {
-    videonames.getVideoNames()
-    videodata.getVideoData()
-    res.send(videonames);
+const { Client } = require('pg')
+const client = new Client({
+    //environment variables
+  // host: {REACT_APP_HOST},
+  // port: {REACT_APP_PORT},
+  // user: {REACT_APP_USER},
+  // password: {REACT_APP_PASSWORD},
 })
 
-app.listen(port, () => {
-    console.log("app is running on port 3001:", port)
+client.connect(err => {
+  if (err) {
+    console.error('connection error', err.stack)
+  } else {
+    console.log('connected')
+  }
 })
+
+module.exports = client;

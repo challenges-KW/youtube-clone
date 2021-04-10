@@ -1,4 +1,3 @@
-import React from 'react'
 import SidebarRow from './SidebarRow'
 import HomeIcon from '@material-ui/icons/Home'
 import ExploreIcon from '@material-ui/icons/Explore'
@@ -7,6 +6,7 @@ import LibraryIcon from '@material-ui/icons/VideoLibrary'
 import '../App.css'
 
 export default function Sidebar() {
+    
     return (
         <div className='app-sidebar' data-testid='sidebar'>
             <SidebarRow 
