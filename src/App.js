@@ -6,17 +6,14 @@ import { VideoList } from './videoList/VideoList'
 import HourglassIcon from '@material-ui/icons/HourglassEmpty'
 import './App.css';
 
-require('dotenv').config()
-
-
 function App() {
 
   const [videos, setVideos] =useState([]);
   const [selectedVideo, setSelectedVideo] =useState();
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   const getVideos = async() => {
-    return await fetch('/videos')
+    return await fetch('/api')
     .then(res => {
       return res.json()
     })
@@ -24,8 +21,6 @@ function App() {
       return fulfill
       })
 }
-
-
 
   useEffect(() => {
     const setVideo = () => {
@@ -60,4 +55,4 @@ function App() {
 
 }
 
-export default App; 
+export default App;

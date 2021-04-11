@@ -6,6 +6,7 @@ import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
 import { videoPlaylist } from './data';
 
+//hard code any data from the server -- pass in actual data
 
 test('renders Header', () => {
   render(<Header />);
