@@ -13,13 +13,22 @@ export default function Header({ sidebar, setSidebar }) {
   const showSidebar = () => setSidebar(!sidebar)
   
   const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl2, setAnchorEl2] = useState(null);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
+  const handleClick2 = (event) => {
+    setAnchorEl2(event.currentTarget);
+  };
+
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const handleClose2 = () => {
+    setAnchorEl2(null);
   };
 
 
@@ -60,18 +69,41 @@ export default function Header({ sidebar, setSidebar }) {
             onClose={handleClose}
           >
               <MenuItem onClick={handleClose}>
-                Profile
+                Upload Video
               </MenuItem>
               <MenuItem onClick={handleClose}>
-                My account
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                Logout
+                Go live
               </MenuItem>
           </Menu>
-          <AppsIcon 
+          <Button aria-controls='simple-menu' aria-haspopup='true' onClick={handleClick2}>
+            <AppsIcon 
             className='app-header-right-icon'
           />
+          </Button>
+          <Menu
+            id='simple-menu'
+            anchorEl={anchorEl2}
+            keepMounted
+            open={Boolean(anchorEl2)}
+            onClose={handleClose2}
+          >
+              <MenuItem onClick={handleClose2}>
+                YouTube TV
+              </MenuItem>
+              <MenuItem onClick={handleClose2}>
+                YouTube Music
+              </MenuItem>
+              <MenuItem onClick={handleClose2}>
+                YouTube Kids
+              </MenuItem>
+              <MenuItem onClick={handleClose2}>
+                Creator Academy
+              </MenuItem>
+              <MenuItem onClick={handleClose2}>
+                YouTube for Artists
+              </MenuItem>
+          </Menu>
+
           <NotificationsIcon  
             className='app-header-right-icon'
           />
