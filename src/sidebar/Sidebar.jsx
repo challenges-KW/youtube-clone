@@ -1,3 +1,4 @@
+import React from 'react'
 import SidebarRow from './SidebarRow'
 import HomeIcon from '@material-ui/icons/Home'
 import ExploreIcon from '@material-ui/icons/Explore'
@@ -5,10 +6,9 @@ import SubscriptionsIcon from '@material-ui/icons/SubscriptionsSharp'
 import LibraryIcon from '@material-ui/icons/VideoLibrary'
 import '../App.css'
 
-export default function Sidebar() {
-    
+export default function Sidebar( { sidebar }) {
     return (
-        <div className='app-sidebar' data-testid='sidebar'>
+        <div className={sidebar ? 'app-sidebar-active' : 'app-sidebar'} data-testid='sidebar'>
             <SidebarRow 
                 Icon={HomeIcon} 
                 title='Home'

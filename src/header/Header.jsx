@@ -1,18 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react'
 import MenuIcon from '@material-ui/icons/Menu'
 import SearchIcon from '@material-ui/icons/Search'
 import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
-export default function Header({open, setOpen}) {
+export default function Header({ sidebar, setSidebar }) {
+
+  const showSidebar = () => setSidebar(!sidebar)
+
     return (
       <div className='app-header' data-testid='header'>
         <div className='app-header-left'>
           <MenuIcon 
             className='app-header-left-icon'
-            open={ open }
-            // onClick={() => setOpen(!open)}
+            onClick={showSidebar}
           />
           <img 
             className='app-logo'

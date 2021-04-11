@@ -10,7 +10,7 @@ function App() {
 
   const [videos, setVideos] =useState([]);
   const [selectedVideo, setSelectedVideo] =useState();
-  // const [open, setOpen] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
   const getVideos = async() => {
     return await fetch('/api')
@@ -37,10 +37,10 @@ function App() {
 
   return (
     <div className='app'>
-      <Header />
+      <Header sidebar={sidebar} setSidebar={setSidebar} />
       <div className='app-body'>
-        {/* <Sidebar open={open} setOpen={setOpen} /> */}
-        <div className='app-content' >
+        <Sidebar sidebar={sidebar} />
+        <div className='app-content' id='page-wrap'>
           {
             (selectedVideo !== undefined)
             ? <Video vid={selectedVideo} />

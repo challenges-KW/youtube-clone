@@ -1,10 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import Header from './header/Header';
 import Sidebar from './sidebar/Sidebar'
-import App from './App';
+import App from './App'
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
-import { videoPlaylist } from './data';
+import Enzyme from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
 
 //hard code any data from the server -- pass in actual data
 
@@ -14,7 +16,7 @@ test('renders Header', () => {
   expect(YoutubeElement).toBeInTheDocument();
 });
 
-test('renders Sidebar', () => {
+xtest('renders Sidebar', () => {
   render(<Sidebar />);
   const YoutubeElement = screen.getByTestId('sidebar');
   expect(YoutubeElement).toBeInTheDocument();
@@ -22,7 +24,7 @@ test('renders Sidebar', () => {
 
 xtest('renders Video component', () => {
   render(<Video vid={selectedVideo} />);
-  const videoComponent = screen.getByTestId('videoComp');
+  const videoComponent = screen.getByText('Hold Up');
   expect(videoComponent).toBeInTheDocument();
 });
 
