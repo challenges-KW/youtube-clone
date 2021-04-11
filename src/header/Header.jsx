@@ -1,4 +1,7 @@
 import React, {useState} from 'react'
+import Button from '@material-ui/core/Button'
+import Menu from '@material-ui/core/Menu'
+import MenuItem from '@material-ui/core/MenuItem'
 import MenuIcon from '@material-ui/icons/Menu'
 import SearchIcon from '@material-ui/icons/Search'
 import VideoCallIcon from '@material-ui/icons/VideoCall'
@@ -8,6 +11,17 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 export default function Header({ sidebar, setSidebar }) {
 
   const showSidebar = () => setSidebar(!sidebar)
+  
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
 
     return (
       <div className='app-header' data-testid='header'>
@@ -33,9 +47,28 @@ export default function Header({ sidebar, setSidebar }) {
           />
         </div>
         <div className='app-header-right'>
-          <VideoCallIcon 
-            className='app-header-right-icon'
-          />
+          <Button aria-controls='simple-menu' aria-haspopup='true' onClick={handleClick}>
+            <VideoCallIcon 
+              className='app-header-right-icon'
+            />
+          </Button>
+          <Menu
+            id='simple-menu'
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+              <MenuItem onClick={handleClose}>
+                Profile
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                My account
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                Logout
+              </MenuItem>
+          </Menu>
           <AppsIcon 
             className='app-header-right-icon'
           />
