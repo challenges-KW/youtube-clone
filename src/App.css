@@ -20,6 +20,7 @@
 
 .app-header-left-icon {
   color: #606060;
+  cursor: pointer;
 }
 
 .app-logo {
