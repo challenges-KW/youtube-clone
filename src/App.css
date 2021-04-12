@@ -63,6 +63,11 @@
   margin-right: 20px;
 }
 
+.app-header-youtube-icons {
+  color: red!important;
+  margin-right: 20px;
+}
+
 .app-body {
   display: flex;
   justify-content: flex-end;
@@ -80,7 +85,6 @@
 
 .app-sidebar-active {
   flex: 0.2;
-  /* transform: translateX(-100%); */
 }
 .app-sidebar {
   flex: 0.2;
@@ -133,4 +137,8 @@ hr {
   flex: 0.55;
   margin-right: 25px;
 
+}
+
+.popup-menu {
+  font-size: 14px!important;
 }

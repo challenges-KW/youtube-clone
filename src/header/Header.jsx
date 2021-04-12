@@ -95,23 +95,23 @@ export default function Header({ sidebar, setSidebar }) {
             anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
             transformOrigin={{vertical: 'top', horizontal: 'center'}}
           >
-              <MenuItem onClick={handleClose2}>
+              <MenuItem className='popup-menu' onClick={handleClose2}>
                 YouTube TV
               </MenuItem>
               <hr />
-              <MenuItem onClick={handleClose2}>
+              <MenuItem className='popup-menu' onClick={handleClose2}>
                 YouTube Music
               </MenuItem>
-              <MenuItem onClick={handleClose2}>
+              <MenuItem className='popup-menu' onClick={handleClose2}>
                 YouTube Kids
               </MenuItem>
               <hr />
-              <MenuItem onClick={handleClose2}>
+              <MenuItem className='popup-menu' onClick={handleClose2}>
                 <YouTubeIcon className='app-header-youtube-icons'
                 />
                 Creator Academy
               </MenuItem>
-              <MenuItem onClick={handleClose2}>
+              <MenuItem className='popup-menu' onClick={handleClose2}>
                 <YouTubeIcon className='app-header-youtube-icons'
                 />
                 YouTube for Artists
