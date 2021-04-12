@@ -62,18 +62,21 @@ export default function Header({ sidebar, setSidebar }) {
             />
           </Button>
           <Menu
-            id='simple-menu'
-            anchorEl={anchorEl}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
+              id='simple-menu'
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+              getContentAnchorEl={null}
+              anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
+              transformOrigin={{vertical: 'top', horizontal: 'center'}}
           >
-              <MenuItem onClick={handleClose}>
-                Upload Video
-              </MenuItem>
-              <MenuItem onClick={handleClose}>
-                Go live
-              </MenuItem>
+            <MenuItem onClick={handleClose}>
+              Upload Video
+            </MenuItem>
+            <MenuItem onClick={handleClose}>
+              Go live
+            </MenuItem>
           </Menu>
           <Button aria-controls='simple-menu' aria-haspopup='true' onClick={handleClick2}>
             <AppsIcon 

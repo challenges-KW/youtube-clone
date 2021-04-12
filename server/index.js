@@ -1,5 +1,3 @@
-// require('dotenv').config()
-
 const client = require('../node-postgres')
 const videoPlaylist = require('../src/data')
  
