@@ -96,12 +96,14 @@ export default function Header({ sidebar, setSidebar }) {
               <MenuItem onClick={handleClose2}>
                 YouTube TV
               </MenuItem>
+              <hr />
               <MenuItem onClick={handleClose2}>
                 YouTube Music
               </MenuItem>
               <MenuItem onClick={handleClose2}>
                 YouTube Kids
               </MenuItem>
+              <hr />
               <MenuItem onClick={handleClose2}>
                 Creator Academy
               </MenuItem>
