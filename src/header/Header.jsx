@@ -73,10 +73,10 @@ export default function Header({ sidebar, setSidebar }) {
               anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
               transformOrigin={{vertical: 'top', horizontal: 'center'}}
           >
-            <MenuItem onClick={handleClose}>
+            <MenuItem className='popup-menu' onClick={handleClose}>
               Upload Video
             </MenuItem>
-            <MenuItem onClick={handleClose}>
+            <MenuItem className='popup-menu' onClick={handleClose}>
               Go live
             </MenuItem>
           </Menu>
