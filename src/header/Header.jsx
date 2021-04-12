@@ -89,6 +89,9 @@ export default function Header({ sidebar, setSidebar }) {
             keepMounted
             open={Boolean(anchorEl2)}
             onClose={handleClose2}
+            getContentAnchorEl={null}
+            anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
+            transformOrigin={{vertical: 'top', horizontal: 'center'}}
           >
               <MenuItem onClick={handleClose2}>
                 YouTube TV
