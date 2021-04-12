@@ -7,6 +7,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import '../App.css'
 
 export default function Header({ sidebar, setSidebar }) {
 
