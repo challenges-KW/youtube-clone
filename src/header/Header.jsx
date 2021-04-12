@@ -7,6 +7,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import '../App.css'
 
 export default function Header({ sidebar, setSidebar }) {
@@ -106,9 +107,13 @@ export default function Header({ sidebar, setSidebar }) {
               </MenuItem>
               <hr />
               <MenuItem onClick={handleClose2}>
+                <YouTubeIcon className='app-header-youtube-icons'
+                />
                 Creator Academy
               </MenuItem>
               <MenuItem onClick={handleClose2}>
+                <YouTubeIcon className='app-header-youtube-icons'
+                />
                 YouTube for Artists
               </MenuItem>
           </Menu>
