@@ -4,8 +4,6 @@ import Sidebar from './sidebar/Sidebar'
 import App from './App'
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
-import Enzyme from 'enzyme';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 
 //hard code any data from the server -- pass in actual data
