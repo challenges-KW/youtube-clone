@@ -18,6 +18,7 @@ export default function Header({ sidebar, setSidebar }) {
 
   const showSidebar = () => setSidebar(!sidebar)
   
+  const [searchTerms, setSearchTerms ] = useState('');
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
 
@@ -53,6 +54,7 @@ export default function Header({ sidebar, setSidebar }) {
         </div>
         <div className='app-header-middle'>
           <input 
+            value={searchTerms}
             type='text'
             placeholder='Search'
             className='app-inputText'
