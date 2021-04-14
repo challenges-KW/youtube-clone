@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { BrowserRouter, Link } from 'react-router-dom' 
 import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -54,21 +55,23 @@ export default function Header({ sidebar, setSidebar }) {
         </div>
         <div className='app-header-middle'>
           <input 
-            onChange={e => setSearchTerms(e.target.value)} 
+            onChange={(e) => setSearchTerms(e.target.value)} 
             value={searchTerms}
             type='text'
             placeholder='Search'
             className='app-inputText'
           />
-          <SearchIcon 
-            className='app-inputButton' 
-          />
+          <BrowserRouter>
+            <Link to={`/search/${searchTerms}`}>
+              <SearchIcon 
+              className='app-inputButton' 
+              />
+            </Link>
+          </BrowserRouter>
         </div>
         <div className='app-header-right'>
           <Button aria-controls='simple-menu' aria-haspopup='true' onClick={handleClick}>
-            <VideoCallIcon 
-              className='app-header-right-icon'
-            />
+            <VideoCallIcon className='app-header-right-icon'/>
           </Button>
           <Menu
               id='simple-menu'
