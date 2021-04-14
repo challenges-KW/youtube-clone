@@ -106,23 +106,25 @@ export default function Header({ sidebar, setSidebar }) {
               </MenuItem>
               <hr />
               <MenuItem className='popup-menu' onClick={handleClose2}>
-              <Icon className='app-header-youtube-icons' icon={youtubemusicIcon} /> 
-                YouTube Music
+                <a href="https://music.youtube.com/" target="_blank" className='popup-links'>
+                  <Icon className='app-header-youtube-icons' icon={youtubemusicIcon} /> YouTube Music
+                </a>
               </MenuItem>
               <MenuItem className='popup-menu' onClick={handleClose2}>
-              <Icon className='app-header-youtube-icons' icon={youtubeIcon} /> 
-                YouTube Kids
+                <a href="https://www.youtubekids.com/?source=youtube_web" target="_blank" className='popup-links'>
+                  <Icon className='app-header-youtube-icons' icon={youtubeIcon} /> YouTube Kids
+                </a>
               </MenuItem>
               <hr />
               <MenuItem className='popup-menu' onClick={handleClose2}>
-                <YouTubeIcon className='app-header-youtube-icons'
-                />
-                Creator Academy
+                <a href="https://creatoracademy.youtube.com/page/home?utm_source=YouTube&utm_medium=YT%20Main&utm_campaign=YT%20Appsn" target="_blank" className='popup-links'>
+                  <YouTubeIcon className='app-header-youtube-icons' /> Creator Academy
+                </a>
               </MenuItem>
               <MenuItem className='popup-menu' onClick={handleClose2}>
-                <YouTubeIcon className='app-header-youtube-icons'
-                />
-                YouTube for Artists
+                <a href="https://artists.youtube.com/" target="_blank" className='popup-links'>
+                  <YouTubeIcon className='app-header-youtube-icons' /> YouTube for Artists
+                </a>
               </MenuItem>
           </Menu>
 
