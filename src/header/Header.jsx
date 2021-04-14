@@ -97,7 +97,8 @@ export default function Header({ sidebar, setSidebar }) {
             onClose={handleClose2}
             getContentAnchorEl={null}
             anchorOrigin={{vertical: 'bottom', horizontal: 'center'}}
-            transformOrigin={{vertical: 'top', horizontal: 'center'}}
+            transformOrigin={{vertical: 'top', horizontal: 'center',
+          }}
           >
               <MenuItem className='popup-menu' onClick={handleClose2}>
                 <a href="https://tv.youtube.com" target="_blank" className='popup-links'>
