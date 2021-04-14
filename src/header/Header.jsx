@@ -54,6 +54,7 @@ export default function Header({ sidebar, setSidebar }) {
         </div>
         <div className='app-header-middle'>
           <input 
+            onChange={e => setSearchTerms(e.target.value)} 
             value={searchTerms}
             type='text'
             placeholder='Search'
