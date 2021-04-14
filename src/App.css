@@ -64,7 +64,7 @@
 }
 
 .app-header-youtube-icons {
-  font-size: 1.6rem !important;
+  font-size: 1.5rem !important;
   color: red!important;
   margin-right: 20px;
 }
@@ -144,7 +144,10 @@ hr {
   font-size: 14px!important;
 }
 
+
 .popup-links {
+  display: flex;
+  align-items: center;
   color: black;
   text-decoration: none;
 }
