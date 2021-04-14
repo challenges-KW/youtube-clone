@@ -8,7 +8,7 @@ import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
 import NotificationsIcon from '@material-ui/icons/Notifications'
 import YouTubeIcon from '@material-ui/icons/YouTube'
-import { Icon, InlineIcon } from '@iconify/react'
+import { Icon } from '@iconify/react'
 import youtubeTv from '@iconify-icons/mdi/youtube-tv'
 import youtubemusicIcon from '@iconify-icons/simple-icons/youtubemusic'
 import youtubeIcon from '@iconify-icons/openmoji/youtube'
@@ -100,7 +100,9 @@ export default function Header({ sidebar, setSidebar }) {
             transformOrigin={{vertical: 'top', horizontal: 'center'}}
           >
               <MenuItem className='popup-menu' onClick={handleClose2}>
-              <Icon className='app-header-youtube-icons' icon={youtubeTv} /> YouTube TV
+                <a href="https://tv.youtube.com" target="_blank" className='popup-links'>
+                  <Icon className='app-header-youtube-icons' icon={youtubeTv} /> YouTube TV
+                </a>
               </MenuItem>
               <hr />
               <MenuItem className='popup-menu' onClick={handleClose2}>
