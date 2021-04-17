@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import './Video.css'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
 import ThumbDownIcon from '@material-ui/icons/ThumbDown'
@@ -7,6 +7,15 @@ export const Video = ({ vid }) => {
   
   const [ likes, setLikes ] = useState(0);
   const [ dislikes, setDislikes ] = useState(0);
+
+  useEffect(() => {
+    const parsedLikes = Number(localStorage.getItem('likes') || 0)
+    setLikes(parsedLikes)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('likes', likes) 
+  }, [likes])
 
   const handleLikes = () => {
     setLikes(prevLikes => prevLikes + 1);
