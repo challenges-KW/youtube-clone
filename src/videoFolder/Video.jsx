@@ -20,8 +20,12 @@ export const Video = ({ vid }) => {
             {vid.views} views • {vid.date}
           </div>
           <div className='likes'>
-            <ThumbUpIcon />
-            <ThumbDownIcon />
+            <div className='likes-thumbsUp'>
+              <ThumbUpIcon /> <span>144</span>
+            </div>
+            <div className="likes-thumbsDown">
+              <ThumbDownIcon /> <span>0</span>
+            </div>
           </div>
         </div>
       <hr></hr>

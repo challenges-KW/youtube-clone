@@ -44,6 +44,25 @@
     flex: .3;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.videoText .likes span {
+    color: black;
+}
+
+.videoText .likes .likes-thumbsUp {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: .5;
+}
+
+.videoText .likes .likes-thumbsDown {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: .5;
 }
 
 .videoWrapper > hr {
