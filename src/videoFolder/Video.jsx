@@ -1,6 +1,7 @@
 import React from 'react'
 import './Video.css'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
+import ThumbDownIcon from '@material-ui/icons/ThumbDown'
 
 export const Video = ({ vid }) => {
   
@@ -14,12 +15,15 @@ export const Video = ({ vid }) => {
         <p className='name' data-testid='videoName'>
           {vid.name}
         </p>
-        <div className='viewsDate' data-testid='videoViewsDate'>
-            {vid.views} views • {vid.date}
-            <ThumbUpIcon />
-        </div>
+        <div className='videoDetails'>
+          <div className='viewsDate' data-testid='videoViewsDate'>
+              {vid.views} views • {vid.date}
+              <ThumbUpIcon />
+              <ThumbDownIcon />
+          </div>
         </div>
       <hr></hr>
+      </div>
     </div>
   );
 }
