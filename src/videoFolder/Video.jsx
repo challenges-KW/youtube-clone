@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Video.css'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
 import ThumbDownIcon from '@material-ui/icons/ThumbDown'
 
 export const Video = ({ vid }) => {
   
+  const [ likes, setLikes ] = useState(0);
+  const [ dislikes, setDislikes ] = useState(0);
+
+  const handleLikes = () => {
+    setLikes(prevLikes => prevLikes + 1);
+  };
+
+  const handleDislikes = () => {
+    setDislikes(prevDislikes => prevDislikes + 1)
+  }
+
+
   return (
     <div  
       className='videoWrapper'>
@@ -21,10 +33,14 @@ export const Video = ({ vid }) => {
           </div>
           <div className='likes'>
             <div className='likes-thumbsUp'>
-              <ThumbUpIcon /> <span>144</span>
+              <ThumbUpIcon 
+                onClick={handleLikes}
+              /> <span>{likes}</span>
             </div>
             <div className="likes-thumbsDown">
-              <ThumbDownIcon /> <span>0</span>
+              <ThumbDownIcon 
+                onClick={handleDislikes}
+              /> <span>{dislikes}</span>
             </div>
           </div>
         </div>

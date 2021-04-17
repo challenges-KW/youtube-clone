@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { VideoList } from './VideoList';
 
-xtest('renders wrapper', () => {
+test('renders wrapper', () => {
   render(<VideoList vidList={videos} onVideoSelect={setSelectedVideo}/>);
   const videoListWrapper = screen.getByTestId('videoListWrapper');
   expect(videoListWrapper).toBeInTheDocument();
