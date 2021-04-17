@@ -15,7 +15,8 @@
 .videoText {
     text-align: left;
     margin-left: 0px;
-    line-height: 7px;
+    line-height: 3px;
+    width: 100%;
 }
 
 .videoText .name {
@@ -27,16 +28,22 @@
 .videoText .videoDetails {
     display: flex;
     align-items: center;
+    flex: 1;
+    justify-content: space-between;
 }
 
 .videoText .viewsDate {
     font-size: .9rem;
     color: #606060;
+    flex: .7;
 }
 
 .videoText .likes {
     font-size: .9rem;
     color:#909090;
+    flex: .3;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .videoWrapper > hr {
