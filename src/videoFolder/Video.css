@@ -24,9 +24,19 @@
     color: black;
 }
 
+.videoText .videoDetails {
+    display: flex;
+    align-items: center;
+}
+
 .videoText .viewsDate {
     font-size: .9rem;
     color: #606060;
+}
+
+.videoText .likes {
+    font-size: .9rem;
+    color:#909090;
 }
 
 .videoWrapper > hr {

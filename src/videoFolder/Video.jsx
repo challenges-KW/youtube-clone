@@ -17,9 +17,11 @@ export const Video = ({ vid }) => {
         </p>
         <div className='videoDetails'>
           <div className='viewsDate' data-testid='videoViewsDate'>
-              {vid.views} views • {vid.date}
-              <ThumbUpIcon />
-              <ThumbDownIcon />
+            {vid.views} views • {vid.date}
+          </div>
+          <div className='likes'>
+            <ThumbUpIcon />
+            <ThumbDownIcon />
           </div>
         </div>
       <hr></hr>
