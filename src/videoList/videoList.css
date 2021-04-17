@@ -14,8 +14,8 @@
 .videolistText {
     text-align: left;
     margin-left: 0;
-    line-height: 7px;
-    margin-bottom: 12px;
+    line-height: 0;
+    margin-bottom: 0;
 }
 
 .videolistText .videoName {
@@ -30,6 +30,11 @@
     font-size: .8rem;
     color: #606060;
     line-height: 0;
+}
+
+.videoPublisher {
+    display: flex;
+    align-items: center;
 }
 
 .icons {
