@@ -25,7 +25,6 @@ export const Video = ({ vid }) => {
     setDislikes(prevDislikes => prevDislikes + 1)
   }
 
-
   return (
     <div  
       className='videoWrapper'>

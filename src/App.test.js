@@ -8,19 +8,24 @@ import { VideoList } from './videoList/VideoList'
 
 //hard code any data from the server -- pass in actual data
 
+jest.mock('./App.js', () => ({
+  App: jest.fn(({ children }) => <div data-testid='App'>{children}</div>)
+}))
+
+
 test('renders Header', () => {
   render(<Header />);
   const YoutubeElement = screen.getByTestId('header');
   expect(YoutubeElement).toBeInTheDocument();
 });
 
-xtest('renders Sidebar', () => {
+test('renders Sidebar', () => {
   render(<Sidebar />);
   const YoutubeElement = screen.getByTestId('sidebar');
   expect(YoutubeElement).toBeInTheDocument();
 });
 
-xtest('renders Video component', () => {
+test('renders Video component', () => {
   render(<Video vid={selectedVideo} />);
   const videoComponent = screen.getByText('Hold Up');
   expect(videoComponent).toBeInTheDocument();
