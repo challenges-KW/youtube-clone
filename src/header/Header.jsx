@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { BrowserRouter, Link } from 'react-router-dom' 
+import { Switch, FormControl, FormControlLabel, FormGroup, FormLabel } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -23,6 +24,7 @@ export default function Header({ sidebar, setSidebar }) {
   const [searchTerms, setSearchTerms ] = useState('');
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
+  const [checked, toggleChecked] = useState(false);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -40,6 +42,9 @@ export default function Header({ sidebar, setSidebar }) {
     setAnchorEl2(null);
   };
 
+  // const handleToggle = (event) => {
+  //   setDark(event.currentTarget);
+  // }
 
     return (
       <div className='app-header' data-testid='header'>
@@ -136,9 +141,17 @@ export default function Header({ sidebar, setSidebar }) {
               </MenuItem>
           </Menu>
 
-          <ToggleOffIcon 
+
+          <FormGroup>
+            <FormControlLabel
+              control={<Switch size="small" checked={checked} onChange={handleChange} />}
+            />
+          </FormGroup>
+
+
+          {/* <ToggleOffIcon 
             className='app-header-right-icon'
-          />
+          /> */}
           <NotificationsIcon  
             className='app-header-right-icon'
           />
