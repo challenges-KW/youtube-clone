@@ -8,6 +8,7 @@ import SearchIcon from '@material-ui/icons/Search'
 import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
 import NotificationsIcon from '@material-ui/icons/Notifications'
+import ToggleOffIcon from '@material-ui/icons/ToggleOff'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import { Icon } from '@iconify/react'
 import youtubeTv from '@iconify-icons/mdi/youtube-tv'
@@ -135,9 +136,13 @@ export default function Header({ sidebar, setSidebar }) {
               </MenuItem>
           </Menu>
 
+          <ToggleOffIcon 
+            className='app-header-right-icon'
+          />
           <NotificationsIcon  
             className='app-header-right-icon'
           />
+
         </div>
       </div>
     )

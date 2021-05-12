@@ -18,6 +18,8 @@ const queryString2 = `INSERT INTO videodata(videoId, imageId, views, date, relat
 const queryString3 ='select * from videonames inner join videodata using(videoId);'
 //delete tables
 const queryString4 = 'drop table videodata'
+const queryString5 = 'CREATE TABLE IF NOT EXISTS thumbs (likes VARCHAR, dislikes VARCHAR);'
+// const queryString6 = `INSERT INTO thumbs(likes, dislikes) values('0', '0');`
 
 app.get('/api', (req, resp) => {
   client.query(queryString3, (err, res) => {
