@@ -21,7 +21,7 @@
 .videoText .name {
     font-size: 1.1rem;
     font-weight: 500;
-    color: black;
+    color: var(--theme-page-text);
 }
 
 .videoText .videoDetails {
@@ -48,7 +48,7 @@
 }
 
 .videoText .likes span {
-    color: black;
+    color: var(--theme-page-text);
 }
 
 .videoText .likes .likes-thumbsUp {

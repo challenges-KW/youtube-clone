@@ -20,7 +20,7 @@
 
 .videolistText .videoName {
     font-size: .9rem;
-    color: black;
+    color: var(--theme-page-text);
     font-weight: 500;
 }
 

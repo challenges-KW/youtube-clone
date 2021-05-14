@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import './Video.css'
+import '../theme.css'
 import ThumbUpIcon from '@material-ui/icons/ThumbUp'
-import ThumbDownIcon from '@material-ui/icons/ThumbDown'
+import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 
 export const Video = ({ vid }) => {
   
+  const [theme, setTheme] = useState('dark');
+
   const [ likes, setLikes ] = useState(0);
   const [ dislikes, setDislikes ] = useState(0);
 
@@ -26,8 +29,11 @@ export const Video = ({ vid }) => {
   }
 
   return (
-    <div  
-      className='videoWrapper'>
+    // <div  
+    //   className='videoWrapper'>
+    <div 
+    className={`videoWrapper ${theme}`}>
+
       <div className='theVideo' data-testid='videoClip'>
         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${vid.videoid}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>

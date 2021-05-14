@@ -5,9 +5,12 @@ import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
 import HourglassIcon from '@material-ui/icons/HourglassEmpty'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import './App.css';
+import './App.css'
+import './theme.css';
 
 function App() {
+
+  const [theme, setTheme] = useState('dark');
 
   const [videos, setVideos] =useState([])
   const [selectedVideo, setSelectedVideo] =useState();
@@ -37,7 +40,7 @@ function App() {
 
 
   return (
-    <div className='app'>
+    <div className={`App ${theme}`}>
       <Header sidebar={sidebar} setSidebar={setSidebar} />
       <div className='app-body'>
         <Sidebar sidebar={sidebar} />
