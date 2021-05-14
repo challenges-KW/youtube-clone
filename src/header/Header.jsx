@@ -24,7 +24,7 @@ export default function Header({ sidebar, setSidebar }) {
   const [searchTerms, setSearchTerms ] = useState('');
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
-  const [checked, toggleChecked] = useState(false);
+  const [checked, setChecked] = useState();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -42,9 +42,9 @@ export default function Header({ sidebar, setSidebar }) {
     setAnchorEl2(null);
   };
 
-  // const handleToggle = (event) => {
-  //   setDark(event.currentTarget);
-  // }
+  const handleToggle = (event) => {
+    setChecked(event.target.checked);
+  }
 
     return (
       <div className='app-header' data-testid='header'>
@@ -144,7 +144,7 @@ export default function Header({ sidebar, setSidebar }) {
 
           <FormGroup>
             <FormControlLabel
-              control={<Switch size="small" checked={checked} onChange={handleChange} />}
+              control={<Switch size="small" checked={checked} onChange={handleToggle} />}
             />
           </FormGroup>
 
