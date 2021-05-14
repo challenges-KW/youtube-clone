@@ -144,7 +144,7 @@ export default function Header({ sidebar, setSidebar }) {
 
           <FormGroup>
             <FormControlLabel
-              control={<Switch size="small" checked={checked} onChange={handleToggle} />}
+              control={<Switch size="small" checked={checked} onChange={handleToggle} color="default"/>}
             />
           </FormGroup>
 
