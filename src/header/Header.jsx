@@ -56,12 +56,6 @@ export default function Header({ sidebar, setSidebar }) {
           <div className='logo-container'>
             
           </div>
-            <picture>
-              <source 
-                srcset='https://github.com/challenges-KW/youtube-clone/blob/main/public/logo-dark-mode.png?raw=true'
-                media='(prefers-color-scheme: dark)' />
-                <img className='app-logo' src="https://github.com/challenges-KW/youtube-clone/blob/main/public/logo-light-mode.png?raw=true" alt='YouTube logo'/>
-            </picture>
         </div>
         <div className='app-header-middle'>
           <input 

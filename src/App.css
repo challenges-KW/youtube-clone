@@ -16,6 +16,8 @@
 
 .app-header-left {
   align-items: flex-start;
+  display: flex;
+  
 }
 
 .app-header-left-icon {
@@ -30,9 +32,10 @@
 
 .logo-container {
   display: block;
-  background-image: url('https://github.com/challenges-KW/youtube-clone/blob/main/public/logo-dark-mode.png?raw=true');
-  width: 180px;
-  height: 236px;
+  background-image: var(--theme-page-logo);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 22px;
   margin-left: 3vh;
 }
 
