@@ -53,11 +53,13 @@ export default function Header({ sidebar, setSidebar }) {
             className='app-header-left-icon'
             onClick={showSidebar}
           />
-          <img 
-            className='app-logo'
-            src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png' 
-            alt='YouTube logo' 
-          />
+          <div className='logo-container'>
+            <img 
+              className='app-logo'
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png' 
+              alt='YouTube logo' 
+            />
+          </div>
         </div>
         <div className='app-header-middle'>
           <input 
