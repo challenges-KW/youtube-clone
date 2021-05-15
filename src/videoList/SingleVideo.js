@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import './VideoList.css';
+import './VideoList.css'
 import '../theme.css'
-import MusicIcon from '@material-ui/icons/MusicNote'
+import MusicIcon from '@material-ui/icons/MusicNote';
 
 export const SingleVideo = ( { video, onSingleVideoSelect } ) => {
   const [theme, setTheme] = useState('dark');

@@ -40,7 +40,7 @@ function App() {
 
 
   return (
-    <div className={`App ${theme}`}>
+    <div className={`app ${theme}`}>
       <Header sidebar={sidebar} setSidebar={setSidebar} />
       <div className='app-body'>
         <Sidebar sidebar={sidebar} />
