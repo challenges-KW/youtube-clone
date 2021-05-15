@@ -2,10 +2,37 @@
     --theme-color: FF0000;
     --theme-page-background: #FFF;
     --theme-page-text: #111;
+    --theme-page-logo: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png');
+    --theme-icons: #606060;
+    --theme-sidebar-icons: #606060;
+    --theme-searchbox-border-color: #ccc;
+    --theme-searchbox-border-shadow-color: #eee;
+    --theme-searchbox-button-color: #f8f8f8;
+    --theme-searchbox-button-border-color: #d3d3d3;
+    --theme-searchbox-button-focus-color: #e9e9e9;
+    --theme-searchbox-button-hover-color: #f0f0f0;
+    --theme-searchbox-button-hover-border-color: ##c6c6c6;
+    --theme-searchbox-button-icon-color: #868686;
+    --theme-searchbox-button-icon-hover-color: #333;
+    --theme-searchbox-background: #ffffff;
+    --theme-searchbox-text-color: #000;
 }
 
 .dark {
     --theme-color: #FF0000;
-    --theme-page-background: #181818;
+    --theme-page-background: #282828;
     --theme-page-text: #FFF;
+    --theme-page-logo: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png');
+    --theme-icons: lightgray;
+    --theme-sidebar-icons: #909090;
+    --theme-searchbox-border-color: hsla(0, 0%, 53.3%, 0.4);
+    --theme-searchbox-border-shadow-color: hsla(0, 0%, 53.3%, 0.4);
+    --theme-searchbox-button-color: hsla(0, 0,%, 100%, 0.08);
+    --theme-searchbox-button-border-color: hsl(0, 0%, 18.82%);
+    --theme-searchbox-button-focus-color: hsla(0, 0%, 100%, 0.08);
+    --theme-searchbox-button-hover-color: hsla(0, 0%, 100%, 0.08);
+    --theme-searchbox-button-hover-border-color: hsl(0, 0%, 18.82%);
+    --theme-searchbox-button-icon-color: hsla(0, 100%, 100%, 0.5);
+    --theme-searchbox-background: hsl(0, 0%, 7%);
+    --theme-searchbox-text-color: hsla(0, 100%, 100%, 0.88);
 }

@@ -67,13 +67,15 @@ export default function Header({ sidebar, setSidebar }) {
             placeholder='Search'
             className='app-inputText'
           />
-          <BrowserRouter>
-            <Link to={`/search/${searchTerms}`}>
-              <SearchIcon 
-              className='app-inputButton' 
-              />
-            </Link>
-          </BrowserRouter>
+          <div className='app-inputButtonContainer'>
+            <BrowserRouter>
+              <Link to={`/search/${searchTerms}`} style={{ textDecoration: 'none' }}>
+                <SearchIcon 
+                className='app-inputButton' 
+                />
+              </Link>
+            </BrowserRouter>
+          </div>
         </div>
         <div className='app-header-right'>
           <Button aria-controls='simple-menu' aria-haspopup='true' onClick={handleClick}>
