@@ -18,6 +18,7 @@
     --theme-searchbox-text-color: #000;
     --theme-toggle-style: default;
     --theme-sidebar-row-hover: lightgray;
+    --theme-popup: #FFF;
 }
 
 .dark {
@@ -35,8 +36,10 @@
     --theme-searchbox-button-hover-color: hsla(0, 0%, 100%, 0.08);
     --theme-searchbox-button-hover-border-color: hsl(0, 0%, 18.82%);
     --theme-searchbox-button-icon-color: hsla(0, 100%, 100%, 0.5);
+    --theme-searchbox-button-icon-hover-color: lightgray;
     --theme-searchbox-background: #282828;
     --theme-searchbox-text-color: hsla(0, 100%, 100%, 0.88);
     --theme-toggle-style: primary;
     --theme-sidebar-row-hover: #363636;
+    --theme-popup: #282828
 }

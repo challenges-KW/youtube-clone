@@ -4,7 +4,7 @@ import '../theme.css'
 import MusicIcon from '@material-ui/icons/MusicNote';
 
 export const SingleVideo = ( { video, onSingleVideoSelect } ) => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   return (
     <div 
