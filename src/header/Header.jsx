@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { BrowserRouter, Link } from 'react-router-dom' 
-import { Switch, FormControl, FormControlLabel, FormGroup, FormLabel } from '@material-ui/core'
+import { Switch, FormControlLabel, FormGroup } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -9,13 +9,13 @@ import SearchIcon from '@material-ui/icons/Search'
 import VideoCallIcon from '@material-ui/icons/VideoCall'
 import AppsIcon from '@material-ui/icons/Apps'
 import NotificationsIcon from '@material-ui/icons/Notifications'
-import ToggleOffIcon from '@material-ui/icons/ToggleOff'
 import YouTubeIcon from '@material-ui/icons/YouTube'
 import { Icon } from '@iconify/react'
 import youtubeTv from '@iconify-icons/mdi/youtube-tv'
 import youtubemusicIcon from '@iconify-icons/simple-icons/youtubemusic'
 import youtubeIcon from '@iconify-icons/openmoji/youtube'
-import '../App.css';
+import '../App.css'
+import '../theme.css';
 
 export default function Header({ sidebar, setSidebar }) {
 
@@ -43,8 +43,9 @@ export default function Header({ sidebar, setSidebar }) {
   };
 
   const handleToggle = (event) => {
-    setChecked(event.target.checked);
-  }
+    setChecked(event.target.checked)
+    };
+
 
     return (
       <div className='app-header' data-testid='header'>
@@ -143,15 +144,12 @@ export default function Header({ sidebar, setSidebar }) {
 
 
           <FormGroup>
-            <FormControlLabel
-              control={<Switch size="small" checked={checked} onChange={handleToggle} color="default"/>}
+            <FormControlLabel 
+              control={<Switch size="small" checked={checked} onChange={handleToggle}className="toggleStyle" />}
             />
           </FormGroup>
 
 
-          {/* <ToggleOffIcon 
-            className='app-header-right-icon'
-          /> */}
           <NotificationsIcon  
             className='app-header-right-icon'
           />

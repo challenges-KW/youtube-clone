@@ -17,7 +17,7 @@
 .app-header-left {
   align-items: flex-start;
   display: flex;
-  
+
 }
 
 .app-header-left-icon {
@@ -105,6 +105,10 @@
   margin-right: 20px;
 }
 
+.toggleStyle {
+  color: var(--theme-toggle-style);
+}
+
 .app-body {
   display: flex;
   justify-content: flex-end;
@@ -145,7 +149,7 @@ hr {
 }
 
 .app-sidebarRow:hover {
-  background-color: lightgray;
+  background-color: var(--theme-sidebar-row-hover);
   cursor: pointer;
 }
 

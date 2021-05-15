@@ -8,13 +8,17 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
 import './theme.css';
 
+
 function App() {
 
   const [theme, setTheme] = useState('light');
-
   const [videos, setVideos] =useState([])
   const [selectedVideo, setSelectedVideo] =useState();
   const [sidebar, setSidebar] = useState(false);
+
+  const onModeToggle = () => {
+    setTheme((theme) => (theme === 'light' ? 'dark' : 'light'));
+  };
 
   const getVideos = async() => {
     return await fetch('/api')
@@ -51,6 +55,9 @@ function App() {
             </Route>
             <Route path='/'>
               <div className='app-content' id='page-wrap'>
+                {/* practice button */}
+                <button onClick={onModeToggle}>try</button>
+
                 {
                   (selectedVideo !== undefined)
                   ? <Video vid={selectedVideo} />
