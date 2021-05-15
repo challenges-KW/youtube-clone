@@ -2,7 +2,7 @@
     --theme-color: FF0000;
     --theme-page-background: #FFF;
     --theme-page-text: #111;
-    --theme-page-logo: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png');
+    --theme-page-logo: url('https://github.com/challenges-KW/youtube-clone/blob/main/public/logo-light-mode.png?raw=true');
     --theme-icons: #606060;
     --theme-sidebar-icons: #606060;
     --theme-searchbox-border-color: #ccc;
@@ -22,7 +22,7 @@
     --theme-color: #FF0000;
     --theme-page-background: #282828;
     --theme-page-text: #FFF;
-    --theme-page-logo: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png');
+    --theme-page-logo: url('https://github.com/challenges-KW/youtube-clone/blob/main/public/logo-dark-mode.png?raw=true');
     --theme-icons: lightgray;
     --theme-sidebar-icons: #909090;
     --theme-searchbox-border-color: hsla(0, 0%, 53.3%, 0.4);

@@ -10,7 +10,7 @@ import './theme.css';
 
 function App() {
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const [videos, setVideos] =useState([])
   const [selectedVideo, setSelectedVideo] =useState();

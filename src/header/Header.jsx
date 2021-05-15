@@ -54,12 +54,14 @@ export default function Header({ sidebar, setSidebar }) {
             onClick={showSidebar}
           />
           <div className='logo-container'>
-            <img 
-              className='app-logo'
-              src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png' 
-              alt='YouTube logo' 
-            />
+            
           </div>
+            <picture>
+              <source 
+                srcset='https://github.com/challenges-KW/youtube-clone/blob/main/public/logo-dark-mode.png?raw=true'
+                media='(prefers-color-scheme: dark)' />
+                <img className='app-logo' src="https://github.com/challenges-KW/youtube-clone/blob/main/public/logo-light-mode.png?raw=true" alt='YouTube logo'/>
+            </picture>
         </div>
         <div className='app-header-middle'>
           <input 
