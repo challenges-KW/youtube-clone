@@ -17,7 +17,7 @@ import youtubeIcon from '@iconify-icons/openmoji/youtube'
 import '../App.css'
 import '../theme.css';
 
-export default function Header({ sidebar, setSidebar }) {
+export default function Header({ sidebar, setSidebar, theme, setTheme }) {
 
   const showSidebar = () => setSidebar(!sidebar)
   
@@ -45,6 +45,12 @@ export default function Header({ sidebar, setSidebar }) {
   const handleToggle = (event) => {
     setChecked(event.target.checked)
     };
+
+  const onModeToggle = () => {
+    setTheme((theme) => (theme === 'light' ? 'dark' : 'light'));
+  }
+
+  // const showSidebar = () => setSidebar(!sidebar)
 
 
     return (
@@ -145,7 +151,7 @@ export default function Header({ sidebar, setSidebar }) {
 
           <FormGroup>
             <FormControlLabel 
-              control={<Switch size="small" checked={checked} onChange={handleToggle}className="toggleStyle" />}
+              control={<Switch size="small" checked={checked} onChange={handleToggle} onClick={onModeToggle} className="toggleStyle" />}
             />
           </FormGroup>
 

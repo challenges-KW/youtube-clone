@@ -45,7 +45,7 @@ function App() {
 
   return (
     <div className={`app ${theme}`}>
-      <Header sidebar={sidebar} setSidebar={setSidebar} />
+      <Header sidebar={sidebar} setSidebar={setSidebar} theme={theme} setTheme={setTheme}/>
       <div className='app-body'>
         <Sidebar sidebar={sidebar} />
         <Router>
@@ -55,8 +55,6 @@ function App() {
             </Route>
             <Route path='/'>
               <div className='app-content' id='page-wrap'>
-                {/* practice button */}
-                <button onClick={onModeToggle}>try</button>
 
                 {
                   (selectedVideo !== undefined)

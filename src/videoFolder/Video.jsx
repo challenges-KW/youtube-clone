@@ -6,7 +6,6 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 
 export const Video = ({ vid }) => {
   
-  const [theme, setTheme] = useState('dark');
 
   const [ likes, setLikes ] = useState(0);
   const [ dislikes, setDislikes ] = useState(0);
@@ -32,7 +31,7 @@ export const Video = ({ vid }) => {
     // <div  
     //   className='videoWrapper'>
     <div 
-    className={`videoWrapper ${theme}`}>
+    className='videoWrapper'>
 
       <div className='theVideo' data-testid='videoClip'>
         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${vid.videoid}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
