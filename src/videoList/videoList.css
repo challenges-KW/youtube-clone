@@ -19,7 +19,7 @@
 }
 
 .videolistText .videoName {
-    font-size: .9rem;
+    font-size: 1em;
     color: var(--theme-page-text);
     font-weight: 500;
 }
@@ -28,7 +28,7 @@
 .videoViews
 {
     font-size: .8rem;
-    color: #606060;
+    color: var(--theme-videolist-text);
     line-height: 0;
 }
 
