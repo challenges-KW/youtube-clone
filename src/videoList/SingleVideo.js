@@ -4,11 +4,10 @@ import '../theme.css'
 import MusicIcon from '@material-ui/icons/MusicNote';
 
 export const SingleVideo = ( { video, onSingleVideoSelect } ) => {
-  const [theme, setTheme] = useState('light');
 
   return (
     <div 
-      className={`singleVideoSnippet ${theme}`} 
+      className={`singleVideoSnippet`} 
       onClick={() => onSingleVideoSelect(video) }
     >
       <div className='videoImage' data-testid='videoClip'>

@@ -1,14 +1,12 @@
 import '../App'
 import React, {useState} from 'react'
 import './VideoList.css'
-import '../theme.css'
 import { SingleVideo } from './SingleVideo';
 
 export const VideoList = ( { vidList, onVideoSelect } ) => {
-    const [theme, setTheme] = useState('dark');
 
     return (
-        <div className ={`videoListWrapper ${theme}`} data-testid='videoListWrapper'>
+        <div className ={'videoListWrapper'} data-testid='videoListWrapper'>
 
             {vidList.map((video, index) => {
                 return <SingleVideo 
