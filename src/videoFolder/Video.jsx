@@ -28,8 +28,6 @@ export const Video = ({ vid }) => {
   }
 
   return (
-    // <div  
-    //   className='videoWrapper'>
     <div 
     className='videoWrapper'>
 

@@ -33,13 +33,13 @@
 
 .videoText .viewsDate {
     font-size: .9rem;
-    color: #606060;
+    color: var(--theme-videolist-text);
     flex: .7;
 }
 
 .videoText .likes {
     font-size: .9rem;
-    color:#909090;
+    color: var(--theme-videolist-thumbs);
     flex: .3;
     display: flex;
     justify-content: space-evenly;
@@ -65,10 +65,10 @@
     flex: .5;
 }
 
-.videoWrapper > hr {
+hr {
     height: 1px;
     border: 0;
-    background-color: lightgray;
+    background-color: var(--theme-videolist-hr);
     margin-top: 10px;
     margin-bottom: 10px;  
 }

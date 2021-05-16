@@ -20,6 +20,8 @@
     --theme-sidebar-row-hover: lightgray;
     --theme-popup: #FFF;
     --theme-videolist-text: #606060;
+    --theme-videolist-hr: lightgray;
+    --theme-videolist-thumbs: #909090;
 }
 
 .dark {
@@ -44,4 +46,6 @@
     --theme-sidebar-row-hover: #363636;
     --theme-popup: #282828;
     --theme-videolist-text: lightgray;
+    --theme-videolist-hr: #333;
+    --theme-videolist-thumbs: #909090;
 }
