@@ -17,14 +17,25 @@ const queryString2 = `INSERT INTO videodata(videoId, imageId, views, date, relat
 //get data
 const queryString3 ='select * from videonames inner join videodata using(videoId);'
 //delete tables
-const queryString4 = 'drop table videodata'
-const queryString5 = 'CREATE TABLE IF NOT EXISTS thumbs (likes VARCHAR, dislikes VARCHAR);'
-// const queryString6 = `INSERT INTO thumbs(likes, dislikes) values('0', '0');`
+const queryString4 = 'drop table thumbs'
+const queryString5 = 'CREATE TABLE IF NOT EXISTS thumbs (videoId VARCHAR, likes VARCHAR, dislikes VARCHAR);'
+const queryString6 = `INSERT INTO thumbs(videoId, likes, dislikes) values('LfRNRymrv9k', '0', '0');`
+const queryString7 = `DELETE FROM thumbs WHERE videoId='LfRNRymrv9k'`
+const queryString8 = 'select * from thumbs inner join videodata using(videoId);'
+
+// app.get('/api', (req, resp) => {
+//   client.query(queryString3, (err, res) => {
+//     if (err) throw err
+//     resp.send(res.rows)
+//     client.end()
+
+//   })  
+// })
 
 app.get('/api', (req, resp) => {
-  client.query(queryString3, (err, res) => {
+  client.query(queryString8, (err, res) => {
     if (err) throw err
-    resp.send(res.rows)
+    resp.send(res)
     client.end()
 
   })  
@@ -34,4 +45,3 @@ app.listen(port, () => {
     console.log('the app is running on port 4000:', port)
     4000
 })
-

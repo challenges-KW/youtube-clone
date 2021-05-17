@@ -16,7 +16,7 @@ export const Video = ({ vid }) => {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('likes', likes) 
+    localStorage.setItem('likes', likes)
   }, [likes])
 
   const handleLikes = () => {
