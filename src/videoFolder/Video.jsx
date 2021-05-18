@@ -44,14 +44,16 @@ export const Video = ({ vid }) => {
           </div>
           <div className='likes'>
             <div className='likes-thumbsUp'>
-              <ThumbUpIcon 
+              {/* <ThumbUpIcon 
                 onClick={handleLikes}
-              /> <span>{likes}</span>
+              /> <span>{likes}</span> */}
+              <ThumbUpIcon />
+                <span>{vid.likes}</span>
+
             </div>
             <div className="likes-thumbsDown">
-              <ThumbDownIcon 
-                onClick={handleDislikes}
-              /> <span>{dislikes}</span>
+              <ThumbDownIcon /> 
+              <span>{vid.dislikes}</span>
             </div>
           </div>
         </div>
