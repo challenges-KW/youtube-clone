@@ -7,13 +7,20 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 export const Video = ({ vid }) => {
   
 
-  const [ likes, setLikes ] = useState(0);
+  const [ likes, setLikes ] = useState([]);
   const [ dislikes, setDislikes ] = useState(0);
 
-  useEffect(() => {
-    const parsedLikes = Number(localStorage.getItem('likes') || 0)
-    setLikes(parsedLikes)
-  }, [])
+//is this necessary? already loads from app.js
+// const fetchLikes = async () => {
+//   const likesResponse = await get('/api')
+// }
+
+
+  // useEffect(() => {
+    // fetch ('/api')
+  //   const parsedLikes = Number('/api'.getItem('likes') || 0)
+  //   setLikes(parsedLikes)
+  // }, [])
 
   useEffect(() => {
     localStorage.setItem('likes', likes)
