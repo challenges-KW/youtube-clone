@@ -19,6 +19,22 @@ app.get('/api', (req, resp) => {
   })  
 })
 
+// app.get('/api', (req, resp) => {
+//   client.query(queries.queryString14(vid.videoId), (err, res) => {
+//     if (err) throw err
+//     resp.send(res.rows)
+//     client.end()
+//   })  
+// })
+
+// app.get('/api/getLikes' (req, resp) => {
+//   client.query(queries.queryString14(vid.videoId), (err, res) => {
+//     if (err) throw err
+//     resp.send(res.rows)
+//     client.end()
+//   })  
+// }, 
+
 app.listen(port, () => {
     console.log('the app is running on port 4000:', port)
     4000

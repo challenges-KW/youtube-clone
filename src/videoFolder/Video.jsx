@@ -10,24 +10,16 @@ export const Video = ({ vid }) => {
   const [ likes, setLikes ] = useState([]);
   const [ dislikes, setDislikes ] = useState(0);
 
-//is this necessary? already loads from app.js
-// const fetchLikes = async () => {
-//   const likesResponse = await get('/api')
-// }
-
 
   // useEffect(() => {
-    // fetch ('/api')
-  //   const parsedLikes = Number('/api'.getItem('likes') || 0)
-  //   setLikes(parsedLikes)
+  //   const parsedLikes = Number('/api/getLikes'.get('likes') || 0)
+  //   console.log("this is:", this)
+  //   setLikes(1)
   // }, [])
 
-  useEffect(() => {
-    localStorage.setItem('likes', likes)
-  }, [likes])
-
-  const handleLikes = () => {
-    setLikes(prevLikes => prevLikes + 1);
+  const handleLikes = (video) => {
+    setLikes(video.likes = +video.likes + 1);
+    console.log("video.likes", typeof video.likes);
   };
 
   const handleDislikes = () => {
@@ -51,11 +43,9 @@ export const Video = ({ vid }) => {
           </div>
           <div className='likes'>
             <div className='likes-thumbsUp'>
-              {/* <ThumbUpIcon 
-                onClick={handleLikes}
-              /> <span>{likes}</span> */}
-              <ThumbUpIcon />
-                <span>{vid.likes}</span>
+              <ThumbUpIcon id="likeButton"
+                onClick={() => handleLikes(vid)}
+              /> <span>{likes}</span>
 
             </div>
             <div className="likes-thumbsDown">
