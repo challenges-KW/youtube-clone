@@ -25,9 +25,19 @@ function App() {
     .then(res => {
       return res.json()
     })
-    .then((fulfill) => {
-      return fulfill
-      })
+    // .then((fulfill) => {
+    //   updateLikes()
+    //   return fulfill
+    //   })
+}
+
+const updateLikes = async() => {
+  return await fetch('/updateLikes')
+  .then(res => {
+    console.log("res in updateLikes: ", res)
+    // return res.json()
+
+  })
 }
 
   useEffect(() => {
@@ -58,10 +68,10 @@ function App() {
 
                 {
                   (selectedVideo !== undefined)
-                  ? <Video vid={selectedVideo} />
+                  ? <Video vid={selectedVideo} updateLikes={updateLikes} />
                   : <div className='app-loading'><HourglassIcon/> Video is loading...</div>
                 }
-                <VideoList vidList={videos} onVideoSelect={setSelectedVideo}/>
+                <VideoList vidList={videos} onVideoSelect={setSelectedVideo} />
               </div>
               </Route>
           </Switch> 

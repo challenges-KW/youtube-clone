@@ -26,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-app": "nodemon server"
   },
   "proxy": "http://localhost:4000",
   "eslintConfig": {
@@ -52,6 +53,7 @@
     "@iconify-icons/mdi": "^1.1.14",
     "@iconify-icons/openmoji": "^1.1.8",
     "@iconify-icons/simple-icons": "^1.1.19",
-    "@iconify/react": "^1.1.4"
+    "@iconify/react": "^1.1.4",
+    "nodemon": "^2.0.7"
   }
 }
