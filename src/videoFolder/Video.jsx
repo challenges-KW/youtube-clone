@@ -10,31 +10,24 @@ export const Video = ({ vid }) => {
   const [ dislikes, setDislikes ] = useState([]);
 
 
-  useEffect(() => {
-    //if you want something to change after initial render in frontend -- refresh page
-      updateLikes(vid)
-      // .then(response => {
-      //   console.log("response: ", response)
-      //   setLikes(response[0].likes)
-      // })
-    }
-  , [])
+  // useEffect(() => {
+  //   //if you want something to change after initial render in frontend -- refresh page
+  //     updateLikes(vid)
+  //     // console.log("vid.likes: ", vid.likes)
+  //     .then(response => {
+  //       console.log("vid.likes: ", vid.likes)
+  //       setLikes(response[0].likes)
+  //       console.log("vid.likes 2: ", vid.likes)
+  //     })
+  //   }
+  // , [])
 
   const updateLikes = async(vid) => {
-    setLikes(likes + 1);
     return await fetch(`/api/${vid.videoid}`)
     .then(res => {
       return res.json()
     })
 }
-
-  // const handleLikes = (video) => {
-  //   try {
-  //     updateLikes();
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
 
   const handleDislikes = () => {
     setDislikes(prevDislikes => prevDislikes + 1)
@@ -58,8 +51,8 @@ export const Video = ({ vid }) => {
           <div className='likes'>
             <div className='likes-thumbsUp'>
               <ThumbUpIcon id="likeButton"
-                onClick={() => updateLikes(vid)}
-              /> <span>{likes}</span>
+                onClick={() => updateLikes(vid).then(setLikes(likes + 1))}
+              /> <span>{vid.likes}</span>
 
             </div>
             <div className="likes-thumbsDown">
