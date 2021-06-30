@@ -16,10 +16,6 @@ function App() {
   const [selectedVideo, setSelectedVideo] =useState();
   const [sidebar, setSidebar] = useState(false);
 
-  // const onModeToggle = () => {
-  //   setTheme((theme) => (theme === 'light' ? 'dark' : 'light'));
-  // };
-
   const getVideos = async() => {
     return await fetch('/api')
     .then(res => {
@@ -62,7 +58,7 @@ function App() {
                 <VideoList vidList={videos} onVideoSelect={setSelectedVideo} />
               </div>
               </Route>
-          </Switch> 
+          </Switch>
         </Router>       
       </div>
     </div>

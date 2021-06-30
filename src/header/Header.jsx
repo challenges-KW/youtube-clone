@@ -17,7 +17,7 @@ import youtubeIcon from '@iconify-icons/openmoji/youtube'
 import '../App.css'
 import '../theme.css';
 
-export default function Header({ sidebar, setSidebar, theme, setTheme }) {
+export default function Header({ sidebar, setSidebar, setTheme }) {
 
   const showSidebar = () => setSidebar(!sidebar)
   
@@ -66,8 +66,8 @@ export default function Header({ sidebar, setSidebar, theme, setTheme }) {
         </div>
         <div className='app-header-middle'>
           <input 
-            onChange={(e) => setSearchTerms(e.target.value)} 
             value={searchTerms}
+            onChange={(e) => setSearchTerms(e.target.value)}
             type='text'
             placeholder='Search'
             className='app-inputText'

@@ -33,14 +33,6 @@ app.get('/api/:id', (req, resp) => {
   });
 })
 
-//   }) (err, res) => {
-//     console.log("res.rows: ", res.rows)
-//     if (err) throw err
-//     resp.send(res.rows)
-//     client.end()
-//   })
-// })
-
 app.listen(port, () => {
     console.log('the app is running on port 4000:', port)
     4000

@@ -7,17 +7,18 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 export const Video = ({ vid }) => {
 
   const [ likes, setLikes ] = useState(vid.likes)
-  const [ dislikes, setDislikes ] = useState([]);
+  // const [ dislikes, setDislikes ] = useState([]);
 
+  useEffect(() => {
+    console.log("vid", vid)
+    vid.likes = likes;
+  });
 
   // useEffect(() => {
   //   //if you want something to change after initial render in frontend -- refresh page
   //     updateLikes(vid)
-  //     // console.log("vid.likes: ", vid.likes)
   //     .then(response => {
-  //       console.log("vid.likes: ", vid.likes)
   //       setLikes(response[0].likes)
-  //       console.log("vid.likes 2: ", vid.likes)
   //     })
   //   }
   // , [])
@@ -25,13 +26,18 @@ export const Video = ({ vid }) => {
   const updateLikes = async(vid) => {
     return await fetch(`/api/${vid.videoid}`)
     .then(res => {
+      console.log("res: ", res)
       return res.json()
     })
 }
 
-  const handleDislikes = () => {
-    setDislikes(prevDislikes => prevDislikes + 1)
-  }
+  // const handleClick = () => {
+  //     (vid.likes + 1)
+  //   }
+
+  // const handleDislikes = () => {
+  //   setDislikes(prevDislikes => prevDislikes + 1)
+  // }
 
   return (
     <div 
@@ -50,10 +56,11 @@ export const Video = ({ vid }) => {
           </div>
           <div className='likes'>
             <div className='likes-thumbsUp'>
-              <ThumbUpIcon id="likeButton"
-                onClick={() => updateLikes(vid).then(setLikes(likes + 1))}
+              <ThumbUpIcon id="likeButton" 
+                onClick={() => {
+                  updateLikes(vid).then(setLikes(likes + 1))}
+                }
               /> <span>{vid.likes}</span>
-
             </div>
             <div className="likes-thumbsDown">
               <ThumbDownIcon /> 
