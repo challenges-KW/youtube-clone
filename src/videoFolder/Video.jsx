@@ -10,8 +10,9 @@ export const Video = ({ vid }) => {
   // const [ dislikes, setDislikes ] = useState([]);
 
   useEffect(() => {
-    console.log("vid", vid)
+    console.log("vid id", vid.videoid)
     vid.likes = likes;
+    console.log("vid likes:", vid.likes)
   });
 
   // useEffect(() => {
