@@ -6,13 +6,15 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 
 export const Video = ({ vid }) => {
 
+  console.log("vid: ", vid)
+
   const [ likes, setLikes ] = useState(vid.likes)
   // const [ dislikes, setDislikes ] = useState([]);
 
   useEffect(() => {
     console.log("vid id", vid.videoid)
     vid.likes = likes;
-    console.log("vid likes:", vid.likes)
+    // console.log("vid likes:", vid.likes)
   });
 
   // useEffect(() => {
@@ -27,14 +29,15 @@ export const Video = ({ vid }) => {
   const updateLikes = async(vid) => {
     return await fetch(`/api/${vid.videoid}`)
     .then(res => {
-      console.log("res: ", res)
+      console.log("res from api/vidvideoid: ", res)
       return res.json()
     })
 }
 
-  // const handleClick = () => {
-  //     (vid.likes + 1)
-  //   }
+  const handleClick = () => {
+    console.log("vid in handleClick: ", vid)
+    updateLikes(vid).then(setLikes(likes + 1))
+  }
 
   // const handleDislikes = () => {
   //   setDislikes(prevDislikes => prevDislikes + 1)
@@ -57,12 +60,19 @@ export const Video = ({ vid }) => {
           </div>
           <div className='likes'>
             <div className='likes-thumbsUp'>
+                <ThumbUpIcon id="likeButton" 
+                  onClick={handleClick}
+                /> <span>{vid.likes}</span>
+              </div>
+
+            {/* <div className='likes-thumbsUp'>
               <ThumbUpIcon id="likeButton" 
                 onClick={() => {
                   updateLikes(vid).then(setLikes(likes + 1))}
                 }
               /> <span>{vid.likes}</span>
-            </div>
+            </div> */}
+
             <div className="likes-thumbsDown">
               <ThumbDownIcon /> 
               <span>{vid.dislikes}</span>
