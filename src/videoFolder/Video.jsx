@@ -9,6 +9,8 @@ export const Video = ({ vid }) => {
   const [ likes, setLikes ] = useState((vid.likes));
   let [ newLikes, setNewLikes ] = useState(0)
 
+  vid.likes = likes
+
   //causes endless rerendering and eventual crash
   // useEffect(() => {
   //   setLikes(vid.likes);
@@ -39,16 +41,18 @@ export const Video = ({ vid }) => {
     })
 }
 
-useEffect (() => {
-  setLikes(vid.likes);
-  console.log(`effect vid likes - ${vid.likes} and likes - ${likes}`)
-  newLikes =+likes
-  console.log(`effect newLikes - ${newLikes}`)
-})
+// useEffect (() => {
+//   //change to vid.likes of currently selected video
+//   setLikes(vid.likes);
+//   console.log(`effect vid likes - ${vid.likes} and likes - ${likes}`)
+//   //combine into newLikes
+//   newLikes =+likes
+//   console.log(`effect newLikes - ${newLikes}`)
+// }, [vid])
 
 const handleClick = () => {
   console.log("handleClick: ", vid.videoid, "'s likes are ", likes);
-  updateLikes(vid).then(setNewLikes(newLikes +1))
+  updateLikes(vid).then(setLikes(likes +1))
   }
 
 // useEffect(() => {
