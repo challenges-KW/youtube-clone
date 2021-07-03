@@ -28,8 +28,8 @@ app.get('/api/:id', (req, resp) => {
   const id = req.params.id;
   console.log("req.params.id: ", id)
   client.query(queries.queryString10, [id]).then(res=> {
-    console.log("res.rows: ", res.rows)
     resp.send(res.rows);
+    console.log("sent successfully: ", res.rows)
   });
 })
 

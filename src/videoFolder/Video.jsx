@@ -6,16 +6,21 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 
 export const Video = ({ vid }) => {
 
-  console.log("vid: ", vid)
+  const [ likes, setLikes ] = useState((vid.likes));
+  let [ newLikes, setNewLikes ] = useState(0)
 
-  const [ likes, setLikes ] = useState(vid.likes)
+  //causes endless rerendering and eventual crash
+  // useEffect(() => {
+  //   setLikes(vid.likes);
+  // }, [vid.likes])
+  
+  // console.log(`THESE ARE VID LIKES ${vid.likes}`)
+  // console.log(`THESE ARE LIKES ${likes}`)
+  // console.log("vid id and vid likes after state declaration", vid.videoid, "'s like are ", vid.likes)
+
+  
+  // const [ likes, setLikes ] = useState(vid.likes)
   // const [ dislikes, setDislikes ] = useState([]);
-
-  useEffect(() => {
-    console.log("vid id", vid.videoid)
-    vid.likes = likes;
-    // console.log("vid likes:", vid.likes)
-  });
 
   // useEffect(() => {
   //   //if you want something to change after initial render in frontend -- refresh page
@@ -29,15 +34,34 @@ export const Video = ({ vid }) => {
   const updateLikes = async(vid) => {
     return await fetch(`/api/${vid.videoid}`)
     .then(res => {
-      console.log("res from api/vidvideoid: ", res)
+      // console.log("res from api/vidvideoid: ", res)
       return res.json()
     })
 }
 
-  const handleClick = () => {
-    console.log("vid in handleClick: ", vid)
-    updateLikes(vid).then(setLikes(likes + 1))
+useEffect (() => {
+  setLikes(vid.likes);
+  console.log(`effect vid likes - ${vid.likes} and likes - ${likes}`)
+  newLikes =+likes
+  console.log(`effect newLikes - ${newLikes}`)
+})
+
+const handleClick = () => {
+  console.log("handleClick: ", vid.videoid, "'s likes are ", likes);
+  updateLikes(vid).then(setNewLikes(newLikes +1))
   }
+
+// useEffect(() => {
+//   // console.log("vid id and vid likes in use effect", vid.videoid, "'s like are ", vid.likes)
+//   setLikes(vid.likes)    
+//   // vid.likes = likes;
+//   // console.log("updatedlikes only: ", updatedLikes)
+// }, [count]);
+
+  // const handleClick = () => {
+  //   console.log("vid in handleClick: ", vid)
+  //   updateLikes(vid).then(setLikes(likes + 1))
+  // }
 
   // const handleDislikes = () => {
   //   setDislikes(prevDislikes => prevDislikes + 1)
