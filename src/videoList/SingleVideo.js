@@ -8,7 +8,7 @@ export const SingleVideo = ( { video, onSingleVideoSelect } ) => {
   return (
     <div 
       className={`singleVideoSnippet`} 
-      onClick={() => onSingleVideoSelect(video) }
+      onClick={() => onSingleVideoSelect(video)}
     >
       <div className='videoImage' data-testid='videoClip'>
         <img src={`https://raw.githubusercontent.com/challenges-KW/youtube-clone/main/public/${video.imageid}`} alt='video screenshot' />

@@ -16,6 +16,7 @@ function App() {
   const [selectedVideo, setSelectedVideo] =useState();
   const [sidebar, setSidebar] = useState(false);
 
+
   const getVideos = async() => {
     return await fetch('/api')
     .then(res => {
@@ -35,7 +36,6 @@ function App() {
   setVideo();
 }, []
 );
-
 
   return (
     <div className={`app ${theme}`}>
