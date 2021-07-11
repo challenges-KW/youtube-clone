@@ -7,7 +7,7 @@ queryString2: `INSERT INTO videodata(videoId, imageId, views, date, relativeDate
 queryString3:'select * from videonames inner join videodata using(videoId)',
 //delete tabes
 queryString4: 'drop table thumbs',
-queryString5: 'CREATE TABLE IF NOT EXISTS thumbs (videoId VARCHAR, likes VARCHAR, dislikes VARCHAR)',
+queryString5: 'CREATE TABLE IF NOT EXISTS thumbs (videoId VARCHAR, likes INTEGER, dislikes INTEGER)',
 queryString6: `INSERT INTO thumbs(likes, dislikes) values(1, 1)`,
 queryString7: `DELETE FROM thumbs WHERE videoId:'LfRNRymrv9k`,
 queryString8: 'select * from videonames inner join videodata using(videoId) inner join thumbs using(videoId)',
