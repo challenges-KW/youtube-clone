@@ -8,6 +8,7 @@ export const Video = ({ vid }) => {
 
   const [ likes, setLikes ] = useState((vid.likes));
 
+  //if vid.likes = likes included here, endless rerenders occur
   useEffect(() => {
     setLikes(vid.likes);
   }, [vid.likes])
@@ -16,8 +17,11 @@ export const Video = ({ vid }) => {
     return await fetch(`/api/${vid.videoid}`)
     .then(response => {
       return response.json()
-    }).then(data => setLikes(data[0].likes)) 
+    }).then(data => {
+      setLikes(data[0].likes+1);
     }
+    );
+  }
 
 
   const handleClick = () => {
