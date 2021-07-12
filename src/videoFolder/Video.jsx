@@ -33,6 +33,10 @@ export const Video = ({ vid }) => {
   updateLikes(vid).then(setLikes(likes +1))
   }
 
+  const handleDislikeClick = () => {
+    console.log("dislike button clicked")
+  }
+
   // const updateDislikes = async(vid) => {
   //   return await fetch(`/api/${vid.videoid}`)
   //   .then(response => {
@@ -72,7 +76,7 @@ export const Video = ({ vid }) => {
                 /> <span>{vid.likes}</span>
               </div>
             <div className="likes-thumbsDown">
-              <ThumbDownIcon id="dislikeButton"/>
+              <ThumbDownIcon id="dislikeButton" onClick={handleDislikeClick} />
               <span>{vid.dislikes}</span>
             </div>
           </div>
