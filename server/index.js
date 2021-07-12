@@ -1,6 +1,6 @@
 const express = require('express')
 const client = require('../node-postgres')
-const videoPlaylist = require('../src/data')
+// const videoPlaylist = require('../src/data')
 const queries = require('../database-queries') 
 
 const app = express()
@@ -15,21 +15,21 @@ app.get('/api', (req, resp) => {
   })  
 })
 
-// const sql = "SELECT * FROM employee WHERE salary > $1";
-// const values = [55000];
-
-// client.query(sql, values).then(res => {
-//   const data = res.rows;
-//   data.forEach(row => console.log(row));
-// });
-
-
 app.get('/api/:id', (req, resp) => {
   const id = req.params.id;
-  console.log("req.params.id: ", id)
+  console.log("id: ", id)
   client.query(queries.queryString10, [id]).then(res=> {
     resp.send(res.rows);
     console.log("sent successfully: ", res.rows)
+  });
+})
+
+app.get('/api/:getDislikes', (req, resp) => {
+  const getDislikes = req.params.id;
+  console.log("id for dislike: ", getDislikes)
+  client.query(queries.queryString11, [getDislikes]).then(res=> {
+    resp.send(res.rows);
+    console.log("DISLIKE: ", res.rows)
   });
 })
 

@@ -7,12 +7,17 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 export const Video = ({ vid }) => {
 
   const [ likes, setLikes ] = useState((vid.likes));
+  // const [ dislikes, setDislikes ] = useState((vid.dislikes));
 
   //if vid.likes = likes included here, endless rerenders occur
   useEffect(() => {
-    setLikes(vid.likes);
+    setLikes(vid.likes)
   }, [vid.likes])
-    
+
+  // useEffect(() => {
+  //   setDislikes(vid.dislikes)
+  // }, [vid.dislikes])
+
   const updateLikes = async(vid) => {
     return await fetch(`/api/${vid.videoid}`)
     .then(response => {
@@ -23,11 +28,27 @@ export const Video = ({ vid }) => {
     );
   }
 
-
-  const handleClick = () => {
+  const handleLikeClick = () => {
   vid.likes = likes;
   updateLikes(vid).then(setLikes(likes +1))
   }
+
+  // const updateDislikes = async(vid) => {
+  //   return await fetch(`/api/${vid.videoid}`)
+  //   .then(response => {
+  //     return response.json()
+  //   }).then(data => {
+  //     console.log(data[0].dislikes)
+  //     setLikes(data[0].dislikes+1);
+  //     console.log("after set: ", data[0].dislikes)
+  //   }
+  //   );
+  // }
+
+  // const handleDislikeClick = () => {
+  // vid.dislikes = dislikes;
+  // updateDislikes(vid).then(setDislikes(dislikes +1))
+  // }
 
   return (
     <div 
@@ -47,20 +68,11 @@ export const Video = ({ vid }) => {
           <div className='likes'>
             <div className='likes-thumbsUp'>
                 <ThumbUpIcon id="likeButton" 
-                  onClick={handleClick}
+                  onClick={handleLikeClick}
                 /> <span>{vid.likes}</span>
               </div>
-
-            {/* <div className='likes-thumbsUp'>
-              <ThumbUpIcon id="likeButton" 
-                onClick={() => {
-                  updateLikes(vid).then(setLikes(likes + 1))}
-                }
-              /> <span>{vid.likes}</span>
-            </div> */}
-
             <div className="likes-thumbsDown">
-              <ThumbDownIcon /> 
+              <ThumbDownIcon id="dislikeButton"/>
               <span>{vid.dislikes}</span>
             </div>
           </div>

@@ -13,4 +13,5 @@ queryString7: `DELETE FROM thumbs WHERE videoId:'LfRNRymrv9k`,
 queryString8: 'select * from videonames inner join videodata using(videoId) inner join thumbs using(videoId)',
 queryString9: 'select * from thumbs',
 queryString10: `UPDATE thumbs SET likes = likes + 1 WHERE (videoId) = $1 RETURNING *`,
+queryString11: `UPDATE thumbs SET dislikes = dislikes + 1 WHERE (videoId) = $1 RETURNING *`,
 }

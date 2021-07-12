@@ -44,7 +44,6 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    cursor: pointer;
 }
 
 .videoText .likes span {
@@ -57,6 +56,12 @@
     justify-content: space-evenly;
     flex: .5;
 }
+
+#likeButton,
+#dislikeButton {
+    background-color: hotpink;
+    cursor: pointer;
+} 
 
 .videoText .likes .likes-thumbsDown {
     display: flex;
