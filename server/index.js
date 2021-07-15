@@ -15,21 +15,22 @@ app.get('/api', (req, resp) => {
   })  
 })
 
-app.get('/api/:id', (req, resp) => {
+app.get('/api/:id/', (req, resp) => {
   const id = req.params.id;
-  console.log("id: ", id)
   client.query(queries.queryString10, [id]).then(res=> {
     resp.send(res.rows);
-    console.log("sent successfully: ", res.rows)
+    var row = res.rows[0];
+    console.log(row.videoid +"'s likes: ", row.likes);
   });
 })
 
-app.get('/api/:getDislikes', (req, resp) => {
-  const getDislikes = req.params.id;
-  console.log("id for dislike: ", getDislikes)
-  client.query(queries.queryString11, [getDislikes]).then(res=> {
+
+app.get('/api/:id/:dislikes', (req, resp) => {
+  const dislikeId = req.params.id;
+  client.query(queries.queryString11, [dislikeId]).then(res=> {
     resp.send(res.rows);
-    console.log("DISLIKE: ", res.rows)
+    var row = res.rows[0];
+    console.log(row.videoid +"'s dislikes: ", row.dislikes);
   });
 })
 

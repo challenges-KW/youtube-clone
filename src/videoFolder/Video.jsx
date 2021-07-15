@@ -7,16 +7,17 @@ import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 export const Video = ({ vid }) => {
 
   const [ likes, setLikes ] = useState((vid.likes));
-  // const [ dislikes, setDislikes ] = useState((vid.dislikes));
+  const [ dislikes, setDislikes ] = useState((vid.dislikes));
 
-  //if vid.likes = likes included here, endless rerenders occur
+//reset likes when vid.likes changes
   useEffect(() => {
     setLikes(vid.likes)
   }, [vid.likes])
 
-  // useEffect(() => {
-  //   setDislikes(vid.dislikes)
-  // }, [vid.dislikes])
+//reset dislikes when vid.dislikes changes
+  useEffect(() => {
+    setDislikes(vid.dislikes)
+  }, [vid.dislikes])
 
   const updateLikes = async(vid) => {
     return await fetch(`/api/${vid.videoid}`)
@@ -33,26 +34,20 @@ export const Video = ({ vid }) => {
   updateLikes(vid).then(setLikes(likes +1))
   }
 
-  const handleDislikeClick = () => {
-    console.log("dislike button clicked")
+  const updateDislikes = async(vid) => {
+    return await fetch(`/api/${vid.videoid}/${vid.dislikes}`)
+    .then(response => {
+      return response.json()
+    }).then(data => {
+      setLikes(data[0].dislikes+1);
+    }
+    );
   }
 
-  // const updateDislikes = async(vid) => {
-  //   return await fetch(`/api/${vid.videoid}`)
-  //   .then(response => {
-  //     return response.json()
-  //   }).then(data => {
-  //     console.log(data[0].dislikes)
-  //     setLikes(data[0].dislikes+1);
-  //     console.log("after set: ", data[0].dislikes)
-  //   }
-  //   );
-  // }
-
-  // const handleDislikeClick = () => {
-  // vid.dislikes = dislikes;
-  // updateDislikes(vid).then(setDislikes(dislikes +1))
-  // }
+  const handleDislikeClick = () => {
+  vid.dislikes = dislikes;
+  updateDislikes(vid).then(setDislikes(dislikes +1))
+  }
 
   return (
     <div 
