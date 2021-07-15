@@ -24,7 +24,7 @@ export default function Header({ sidebar, setSidebar, setTheme }) {
   const [searchTerms, setSearchTerms ] = useState('');
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
-  const [checked, setChecked] = useState();
+  const [checked, setChecked] = useState(false);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);

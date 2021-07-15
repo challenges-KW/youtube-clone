@@ -11,7 +11,7 @@ export const Video = ({ vid }) => {
 
 //reset likes when vid.likes changes
   useEffect(() => {
-    setLikes(vid.likes)
+    setLikes(vid.likes);
   }, [vid.likes])
 
 //reset dislikes when vid.dislikes changes
