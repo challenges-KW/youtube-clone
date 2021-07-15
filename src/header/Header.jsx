@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { BrowserRouter, Link } from 'react-router-dom' 
-import { Switch, FormControlLabel, FormGroup } from '@material-ui/core'
+import { withStyles, Switch, FormControlLabel, FormGroup } from '@material-ui/core'
 import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
@@ -49,6 +49,20 @@ export default function Header({ sidebar, setSidebar, setTheme }) {
   const onModeToggle = () => {
     setTheme((theme) => (theme === 'light' ? 'dark' : 'light'));
   }
+
+  const YTSwitch = withStyles({
+    switchBase: {
+      color: '#B8BEDD',
+      '&$checked': {
+        color: '#FF0000',
+      },
+      '&$checked + $track': {
+        backgroundColor: '#FFF',
+      },
+    },
+    checked: {},
+    track: {},
+  })(Switch);
 
   // const showSidebar = () => setSidebar(!sidebar)
 
@@ -151,7 +165,7 @@ export default function Header({ sidebar, setSidebar, setTheme }) {
 
           <FormGroup>
             <FormControlLabel 
-              control={<Switch size="small" checked={checked} onChange={handleToggle} onClick={onModeToggle} className="toggleStyle" />}
+              control={<YTSwitch size="small" checked={checked} onChange={handleToggle} onClick={onModeToggle} className="toggleStyle" />}
             />
           </FormGroup>
 
