@@ -19,6 +19,8 @@ export const Video = ({ vid }) => {
     setDislikes(vid.dislikes)
   }, [vid.dislikes])
 
+
+  
   const updateLikes = async(vid) => {
     return await fetch(`/api/${vid.videoid}`)
     .then(response => {

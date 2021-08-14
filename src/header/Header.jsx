@@ -52,7 +52,7 @@ export default function Header({ sidebar, setSidebar, setTheme }) {
 
   const YTSwitch = withStyles({
     switchBase: {
-      color: '#B8BEDD',
+      color: '#444652',
       '&$checked': {
         color: '#FF0000',
       },
