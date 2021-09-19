@@ -3,6 +3,7 @@ import Header from './header/Header'
 import Sidebar from './sidebar/Sidebar'
 import { Video } from './videoFolder/Video'
 import { VideoList } from './videoList/VideoList'
+import { Loading } from './Loading'
 import HourglassIcon from '@material-ui/icons/HourglassEmpty'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
@@ -53,7 +54,7 @@ function App() {
                 {
                   (selectedVideo !== undefined)
                   ? <Video vid={selectedVideo} />
-                  : <div className='app-loading'><HourglassIcon/> Video is loading...</div>
+                  : < Loading />
                 }
                 <VideoList vidList={videos} onVideoSelect={setSelectedVideo} />
               </div>
